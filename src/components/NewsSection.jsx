@@ -24,8 +24,9 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="border-b border-t border-gray-200 bg-white px-5 py-15 md:px-20 lg:px-25 lg:py-25">
-      <div className="flex flex-col gap-12">
+    <section className="border-b border-t border-gray-200 bg-white">
+      <div className="mx-auto max-w-[1240px] px-5 py-15 md:px-10 lg:px-5 lg:py-25">
+        <div className="flex flex-col gap-12">
         <div className="flex flex-col items-center justify-between gap-5 md:flex-row md:items-center">
           <div className="flex flex-col gap-3">
             <svg className="self-stretch" width="1067" height="30" viewBox="0 0 1067 30" fill="none">
@@ -74,6 +75,7 @@ const NewsSection = () => {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </section>

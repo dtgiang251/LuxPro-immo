@@ -14,8 +14,9 @@ const PropertiesSection = () => {
   ];
 
   return (
-    <section className="px-5 py-20 md:px-20 lg:px-25 lg:py-30">
-      <div className="flex flex-col items-center gap-15">
+    <section>
+      <div className="mx-auto max-w-[1240px] px-5 py-20 md:px-10 lg:px-5 lg:py-30">
+        <div className="flex flex-col items-center gap-15">
         <div className="flex w-full flex-col items-center gap-5 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-3.5">
             <svg className="self-stretch" width="968" height="30" viewBox="0 0 968 30" fill="none">
@@ -55,6 +56,7 @@ const PropertiesSection = () => {
         <button className="rounded-[10px] border-2 border-primary bg-transparent px-8 py-3 text-center font-poppins text-base text-primary transition-all hover:bg-primary hover:text-white">
           VIew more
         </button>
+        </div>
       </div>
     </section>
   );

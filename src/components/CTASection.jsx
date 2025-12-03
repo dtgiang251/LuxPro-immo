@@ -3,7 +3,8 @@ import React from 'react';
 const CTASection = () => {
   return (
     <section className="relative h-[495px] overflow-hidden bg-gray-50">
-      <div className="relative flex px-5 py-24 md:px-20 lg:px-25">
+      <div className="mx-auto max-w-[1240px] px-5 md:px-10 lg:px-5">
+        <div className="relative flex py-24">
         <div className="flex w-full max-w-[513px] flex-col gap-13">
           <div className="flex flex-col gap-5">
             <h2 className="font-poppins text-[38px] font-bold leading-[44px]">
@@ -33,6 +34,7 @@ const CTASection = () => {
             alt="House" 
             className="h-full w-full object-cover"
           />
+        </div>
         </div>
       </div>
     </section>

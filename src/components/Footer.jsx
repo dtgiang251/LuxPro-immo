@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="bg-white">
-      <div className="flex flex-col">
-        <div className="flex flex-col gap-15 px-5 py-15 md:px-20 md:py-20 lg:flex-row lg:px-25 lg:py-25">
+      <div className="mx-auto max-w-[1240px] px-5">
+        <div className="flex flex-col gap-15 py-15 md:px-5 md:py-20 lg:flex-row lg:py-25">
           <div className="flex flex-1 flex-col gap-8">
             <img 
               src="https://api.builder.io/api/v1/image/assets/TEMP/abc7878d4ff4e50737ff949344578816822341ed?width=240" 
@@ -89,7 +89,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 px-5 pb-5 md:px-20 lg:px-25">
+        <div className="flex flex-col gap-5 pb-5 md:px-5">
           <div className="h-px w-full bg-gray-300"></div>
           <div className="flex flex-col items-center justify-between gap-5 text-sm leading-4 md:flex-row">
             <p className="text-center md:text-left">

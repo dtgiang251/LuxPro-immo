@@ -4,8 +4,9 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full border-b border-gray-200 bg-white px-5 py-3.5 md:px-20 lg:px-30">
-      <div className="flex items-center justify-between gap-10 lg:gap-25">
+    <nav className="w-full border-b border-gray-200 bg-white">
+      <div className="mx-auto max-w-[1240px] px-5 py-3.5 md:px-10 lg:px-5">
+        <div className="flex items-center justify-between gap-10 lg:gap-25">
         <img 
           src="https://api.builder.io/api/v1/image/assets/TEMP/980a809e9d3eafef0d406e5078923c6bcd171de0?width=196" 
           alt="LUX-PRO-IMMO" 
@@ -57,6 +58,7 @@ const Navigation = () => {
             <span className="h-0.5 w-6 rounded bg-black"></span>
           </div>
         </button>
+        </div>
       </div>
     </nav>
   );

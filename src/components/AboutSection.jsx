@@ -45,8 +45,9 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="bg-gray-50 px-5 py-20 md:px-20 lg:px-25 lg:py-30">
-      <div className="flex flex-col gap-10 lg:flex-row lg:gap-25">
+    <section className="bg-gray-50">
+      <div className="mx-auto max-w-[1240px] px-5 py-20 md:px-10 lg:px-5 lg:py-30">
+        <div className="flex flex-col gap-10 lg:flex-row lg:gap-25">
         <div className="flex flex-1 flex-col gap-5">
           <div className="flex flex-col gap-3.5">
             <svg className="self-stretch" width="540" height="30" viewBox="0 0 540 30" fill="none">
@@ -96,6 +97,7 @@ const AboutSection = () => {
             alt="Property 3" 
             className="absolute right-0 top-0 hidden h-[503px] w-[450px] rounded-l-lg object-cover shadow-property lg:block"
           />
+        </div>
         </div>
       </div>
     </section>

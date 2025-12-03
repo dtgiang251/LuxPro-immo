@@ -3,7 +3,8 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <section className="relative h-[600px] w-full bg-cover bg-center" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/683ac9bd05003d81c3c6b48ccfc07855cfd7f035?width=2880')" }}>
-      <div className="flex h-full flex-col items-center justify-center gap-20 bg-black/30 px-5 py-20 md:px-20 lg:px-30">
+      <div className="flex h-full items-center justify-center bg-black/30">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center gap-20 px-5 py-20 md:px-10 lg:px-5">
         <h1 className="max-w-[800px] text-center font-poppins text-[38px] font-bold leading-[44px] text-white">
           Your real estate project is in good hands with the Lux-Pro-Immo team
         </h1>
@@ -52,6 +53,7 @@ const HeroSection = () => {
               <path d="M6.6665 5.8335H14.1665V13.3335" stroke="#85053B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
+        </div>
         </div>
       </div>
     </section>
