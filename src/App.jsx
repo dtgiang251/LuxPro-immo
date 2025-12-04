@@ -1,10 +1,10 @@
 import React from 'react';
-import BlogArticlePage from './components/BlogArticlePage';
+import ContactPage from './components/ContactPage';
 
 function App() {
   return (
     <div className="App">
-      <BlogArticlePage />
+      <ContactPage />
     </div>
   );
 }
