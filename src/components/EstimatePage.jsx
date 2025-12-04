@@ -2,12 +2,23 @@ import React, { useState } from 'react';
 import Navigation from './Navigation';
 import EstimateStepper from './EstimateStepper';
 import EstimateStep1 from './EstimateStep1';
+import EstimateStep2 from './EstimateStep2';
 
 const EstimatePage = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     propertyType: 'apartment',
     propertySubtype: '',
+    commune: '',
+    exposure: '',
+    view: 'Not overlooked',
+    environment: 'Not overlooked',
+    amenities: {
+      commerces: true,
+      greenSpaces: false,
+      transports: false,
+      schools: false
+    }
   });
 
   const steps = [
@@ -46,12 +57,20 @@ const EstimatePage = () => {
             
             <div className="flex min-w-[240px] flex-1 items-start gap-7">
               {currentStep === 1 && (
-                <EstimateStep1 
+                <EstimateStep1
                   formData={formData}
                   updateFormData={updateFormData}
                   onNext={handleNext}
                   onPrevious={handlePrevious}
                   isFirstStep={currentStep === 1}
+                />
+              )}
+              {currentStep === 2 && (
+                <EstimateStep2
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  onNext={handleNext}
+                  onPrevious={handlePrevious}
                 />
               )}
             </div>
@@ -60,11 +79,23 @@ const EstimatePage = () => {
 
         <img
           loading="lazy"
-          srcSet="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=1200 1200w"
-          src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true"
+          srcSet={
+            currentStep === 2
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=1200 1200w"
+              : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=1200 1200w"
+          }
+          src={
+            currentStep === 2
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true"
+              : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true"
+          }
           alt="Property visualization"
           className="min-w-[240px] flex-1 object-cover"
-          style={{ flexBasis: '200px', maxWidth: '600px', aspectRatio: '0.82' }}
+          style={{
+            flexBasis: '200px',
+            maxWidth: '600px',
+            aspectRatio: currentStep === 2 ? '0.61' : '0.82'
+          }}
         />
       </div>
     </div>
