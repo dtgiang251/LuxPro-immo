@@ -7,6 +7,9 @@ import ContactPage from './components/ContactPage';
 import SellPage from './components/SellPage';
 import PropertyDetailPage from './components/PropertyDetailPage';
 import EstimatePage from './components/EstimatePage';
+import EstimateResultPage from './components/EstimateResultPage';
+import BlogPage from './components/BlogPage';
+import BlogArticlePage from './components/BlogArticlePage';
 
 function App() {
   return (
@@ -18,7 +21,10 @@ function App() {
           <Route path="/sell" element={<SellPage />} />
           <Route path="/finance" element={<FinancePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogArticlePage />} />
           <Route path="/estimate" element={<EstimatePage />} />
+          <Route path="/estimate/result" element={<EstimateResultPage />} />
           <Route path="/property/:id" element={<PropertyDetailPage />} />
         </Routes>
       </div>

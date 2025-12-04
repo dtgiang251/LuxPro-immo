@@ -154,6 +154,7 @@ const BlogGrid = () => {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <div className="lg:col-span-1">
               <BlogCard
+                id={blogPosts[0].id}
                 image={blogPosts[0].image}
                 title={blogPosts[0].title}
                 excerpt={blogPosts[0].excerpt}
@@ -163,12 +164,14 @@ const BlogGrid = () => {
 
             <div className="flex flex-col gap-4 lg:col-span-1">
               <BlogCard
+                id={blogPosts[1].id}
                 image={blogPosts[1].image}
                 title={blogPosts[1].title}
                 excerpt={blogPosts[1].excerpt}
                 variant="horizontal"
               />
               <BlogCard
+                id={blogPosts[2].id}
                 image={blogPosts[2].image}
                 title={blogPosts[2].title}
                 excerpt={blogPosts[2].excerpt}
@@ -179,12 +182,14 @@ const BlogGrid = () => {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <BlogCard
+              id={blogPosts[3].id}
               image={blogPosts[3].image}
               title={blogPosts[3].title}
               excerpt={blogPosts[3].excerpt}
               variant="horizontal"
             />
             <BlogCard
+              id={blogPosts[4].id}
               image={blogPosts[4].image}
               title={blogPosts[4].title}
               excerpt={blogPosts[4].excerpt}
@@ -194,12 +199,14 @@ const BlogGrid = () => {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <BlogCard
+              id={blogPosts[5].id}
               image={blogPosts[5].image}
               title={blogPosts[5].title}
               excerpt={blogPosts[5].excerpt}
               variant="horizontal"
             />
             <BlogCard
+              id={blogPosts[6].id}
               image={blogPosts[6].image}
               title={blogPosts[6].title}
               excerpt={blogPosts[6].excerpt}

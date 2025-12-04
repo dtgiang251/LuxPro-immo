@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -30,21 +31,21 @@ const Footer = () => {
 
           <div className="flex flex-1 gap-6">
             <div className="flex flex-1 flex-col gap-9">
-              <h3 className="font-poppins text-lg font-bold leading-6">Company</h3>
+              <h3 className="font-poppins text-lg font-bold leading-6">Explore</h3>
               <ul className="flex flex-col gap-7">
-                <li><a href="#buy" className="text-base leading-[26px] hover:text-primary">Buy</a></li>
-                <li><a href="#rent" className="text-base leading-[26px] hover:text-primary">Rent</a></li>
-                <li><a href="#sell" className="text-base leading-[26px] hover:text-primary">Sell/Rent my property</a></li>
-                <li><a href="#blog" className="text-base leading-[26px] hover:text-primary">Blog</a></li>
+                <li><Link to="/buy" className="text-base leading-[26px] hover:text-primary transition-colors">Buy</Link></li>
+                <li><Link to="/buy" className="text-base leading-[26px] hover:text-primary transition-colors">Rent</Link></li>
+                <li><Link to="/sell" className="text-base leading-[26px] hover:text-primary transition-colors">Sell or Rent property</Link></li>
+                <li><Link to="/blog" className="text-base leading-[26px] hover:text-primary transition-colors">Blog</Link></li>
               </ul>
             </div>
 
             <div className="flex flex-1 flex-col gap-9">
-              <h3 className="font-poppins text-lg font-bold leading-6">Company</h3>
+              <h3 className="font-poppins text-lg font-bold leading-6">Services</h3>
               <ul className="flex flex-col gap-7">
-                <li><a href="#contact" className="text-base leading-[26px] hover:text-primary">Contact</a></li>
-                <li><a href="#finance" className="text-base leading-[26px] hover:text-primary">Finance</a></li>
-                <li><a href="#estimate" className="text-base leading-[26px] hover:text-primary">Estimate</a></li>
+                <li><Link to="/contact" className="text-base leading-[26px] hover:text-primary transition-colors">Contact</Link></li>
+                <li><Link to="/finance" className="text-base leading-[26px] hover:text-primary transition-colors">Finance</Link></li>
+                <li><Link to="/estimate" className="text-base leading-[26px] hover:text-primary transition-colors">Estimate</Link></li>
               </ul>
             </div>
           </div>
