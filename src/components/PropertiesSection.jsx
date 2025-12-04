@@ -5,12 +5,12 @@ const PropertiesSection = () => {
   const filters = ['All', 'Buy', 'Rent'];
 
   const properties = [
-    { id: 1, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property1.jpg', type: 'Buy' },
-    { id: 2, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property2.jpg', type: 'Rent' },
-    { id: 3, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property3.jpg', type: 'Buy' },
-    { id: 4, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property4.jpg', type: 'Rent' },
-    { id: 5, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property5.jpg', type: 'Buy' },
-    { id: 6, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property6.jpg', type: 'Rent' }
+    { id: 1, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/e2a0598dc33fdee1e1cb5ba55873ffd15ffb81a7?placeholderIfAbsent=true&width=800', type: 'Buy' },
+    { id: 2, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/0fe1fcea814af24c5b713c1c434752200d33e04b?placeholderIfAbsent=true&width=800', type: 'Rent' },
+    { id: 3, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d87ab08065ec89866d92d486c0c0b6b4cfd03bc0?placeholderIfAbsent=true&width=800', type: 'Buy' },
+    { id: 4, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d06b287dfe2e465d48f312f38bbb06b7e4b60863?placeholderIfAbsent=true&width=800', type: 'Rent' },
+    { id: 5, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/525f6c0cd8e2b52db118db7aea92a6371965b5a3?placeholderIfAbsent=true&width=800', type: 'Buy' },
+    { id: 6, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/78ba8d627363f2dd4fb76147d7bbaa9e07982b52?placeholderIfAbsent=true&width=800', type: 'Rent' }
   ];
 
   return (
