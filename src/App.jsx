@@ -1,10 +1,10 @@
 import React from 'react';
-import Homepage from './components/Homepage';
+import BlogPage from './components/BlogPage';
 
 function App() {
   return (
     <div className="App">
-      <Homepage />
+      <BlogPage />
     </div>
   );
 }
