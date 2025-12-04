@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
 import EstimateStepper from './EstimateStepper';
 import EstimateStep1 from './EstimateStep1';
@@ -9,6 +10,7 @@ import EstimateStep5 from './EstimateStep5';
 import EstimateStep6 from './EstimateStep6';
 
 const EstimatePage = () => {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     propertyType: 'apartment',
@@ -72,7 +74,7 @@ const EstimatePage = () => {
 
   const handleSubmit = () => {
     console.log('Form submitted:', formData);
-    alert('Estimate submitted successfully!');
+    navigate('/estimate/result', { state: { formData } });
   };
 
   const updateFormData = (data) => {
