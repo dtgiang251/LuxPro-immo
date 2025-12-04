@@ -14,9 +14,8 @@ const PropertiesSection = () => {
   ];
 
   return (
-    <section>
+    <section className="relative bg-white">
       <div className="mx-auto max-w-[1240px] px-5 py-20 md:px-10 lg:px-5 lg:py-30">
-        <div className="flex flex-col items-center gap-15">
         <div className="flex w-full flex-col items-center gap-5 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-3.5">
             <svg className="self-stretch" width="968" height="30" viewBox="0 0 968 30" fill="none">
@@ -42,7 +41,7 @@ const PropertiesSection = () => {
           </div>
         </div>
 
-        <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-15 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {properties.slice(0, 6).map((property) => (
             <div
               key={property.id}
@@ -53,11 +52,11 @@ const PropertiesSection = () => {
           ))}
         </div>
 
-        <button className="rounded-[10px] border-2 border-primary bg-transparent px-8 py-3 text-center font-poppins text-base text-primary transition-all hover:bg-primary hover:text-white">
+        <button className="mt-15 rounded-[10px] border-2 border-primary bg-transparent px-8 py-3 text-center font-poppins text-base text-primary transition-all hover:bg-primary hover:text-white">
           VIew more
         </button>
-        </div>
       </div>
+      <div className="absolute bottom-[178px] left-[59px] hidden h-30 w-30 bg-primary lg:block"></div>
     </section>
   );
 };
