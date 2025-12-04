@@ -5,18 +5,17 @@ const PropertiesSection = () => {
   const filters = ['All', 'Buy', 'Rent'];
 
   const properties = [
-    { id: 1, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property1.jpg', type: 'Buy' },
-    { id: 2, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property2.jpg', type: 'Rent' },
-    { id: 3, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property3.jpg', type: 'Buy' },
-    { id: 4, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property4.jpg', type: 'Rent' },
-    { id: 5, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property5.jpg', type: 'Buy' },
-    { id: 6, image: 'https://api.builder.io/api/v1/image/assets/TEMP/property6.jpg', type: 'Rent' }
+    { id: 1, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/e2a0598dc33fdee1e1cb5ba55873ffd15ffb81a7?placeholderIfAbsent=true&width=800', type: 'Buy' },
+    { id: 2, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/0fe1fcea814af24c5b713c1c434752200d33e04b?placeholderIfAbsent=true&width=800', type: 'Rent' },
+    { id: 3, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d87ab08065ec89866d92d486c0c0b6b4cfd03bc0?placeholderIfAbsent=true&width=800', type: 'Buy' },
+    { id: 4, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d06b287dfe2e465d48f312f38bbb06b7e4b60863?placeholderIfAbsent=true&width=800', type: 'Rent' },
+    { id: 5, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/525f6c0cd8e2b52db118db7aea92a6371965b5a3?placeholderIfAbsent=true&width=800', type: 'Buy' },
+    { id: 6, image: 'https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/78ba8d627363f2dd4fb76147d7bbaa9e07982b52?placeholderIfAbsent=true&width=800', type: 'Rent' }
   ];
 
   return (
-    <section>
+    <section className="relative bg-white">
       <div className="mx-auto max-w-[1240px] px-5 py-20 md:px-10 lg:px-5 lg:py-30">
-        <div className="flex flex-col items-center gap-15">
         <div className="flex w-full flex-col items-center gap-5 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-3.5">
             <svg className="self-stretch" width="968" height="30" viewBox="0 0 968 30" fill="none">
@@ -42,7 +41,7 @@ const PropertiesSection = () => {
           </div>
         </div>
 
-        <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-15 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {properties.slice(0, 6).map((property) => (
             <div
               key={property.id}
@@ -53,11 +52,11 @@ const PropertiesSection = () => {
           ))}
         </div>
 
-        <button className="rounded-[10px] border-2 border-primary bg-transparent px-8 py-3 text-center font-poppins text-base text-primary transition-all hover:bg-primary hover:text-white">
+        <button className="mt-15 rounded-[10px] border-2 border-primary bg-transparent px-8 py-3 text-center font-poppins text-base text-primary transition-all hover:bg-primary hover:text-white">
           VIew more
         </button>
-        </div>
       </div>
+      <div className="absolute bottom-[178px] left-[59px] hidden h-30 w-30 bg-primary lg:block"></div>
     </section>
   );
 };
