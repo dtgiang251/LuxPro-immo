@@ -6,6 +6,7 @@ import FinancePage from './components/FinancePage';
 import ContactPage from './components/ContactPage';
 import SellPage from './components/SellPage';
 import PropertyDetailPage from './components/PropertyDetailPage';
+import EstimatePage from './components/EstimatePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/sell" element={<SellPage />} />
           <Route path="/finance" element={<FinancePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/estimate" element={<EstimatePage />} />
           <Route path="/property/:id" element={<PropertyDetailPage />} />
         </Routes>
       </div>

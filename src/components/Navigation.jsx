@@ -56,7 +56,7 @@ const Navigation = () => {
               <Link to="/contact" className="text-base transition-colors hover:text-primary">Contact</Link>
               <div className="h-3 w-px bg-black"></div>
               <Link to="/finance" className="text-base transition-colors hover:text-primary">Finance</Link>
-              <a href="#estimate" className="text-base">Estimate</a>
+              <Link to="/estimate" className="text-base transition-colors hover:text-primary">Estimate</Link>
             </div>
           </div>
 
@@ -104,7 +104,7 @@ const Navigation = () => {
                   <Link to="/finance" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Finance</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
-                  <a href="#estimate" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Estimate</a>
+                  <Link to="/estimate" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Estimate</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
                   <div className="flex justify-center gap-10 py-5">
@@ -155,14 +155,14 @@ const Navigation = () => {
                 </svg>
                 <span className="font-poppins text-base font-bold">Finance</span>
               </Link>
-              <button className="flex items-center justify-center gap-2 py-4">
+              <Link to="/estimate" className="flex items-center justify-center gap-2 py-4" onClick={() => setIsMenuOpen(false)}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M19.2891 22.1953H4.71094C3.76641 22.1953 3 21.4266 3 20.482V3.51797C3 2.57344 3.76641 1.80469 4.71094 1.80469H19.2891C20.2336 1.80469 21 2.57344 21 3.51797V20.4844C21 21.4266 20.2336 22.1953 19.2891 22.1953Z" fill="black"/>
                   <path d="M4.06445 7.21875H19.9355V8.3125H4.06445V7.21875ZM6.89648 11.9961H10.0059V13.0898H6.89648V11.9961Z" fill="white"/>
                   <path d="M16.4591 15.8436L17.3872 16.7717L14.7355 19.4233L13.8075 18.4952L16.4591 15.8436ZM15.8967 10.3364L16.8246 11.2646L8.12276 19.964L7.19482 19.0358L15.8967 10.3364Z" fill="white"/>
                 </svg>
                 <span className="font-poppins text-base font-bold">Estimate</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
