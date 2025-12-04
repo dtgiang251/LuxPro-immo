@@ -116,7 +116,7 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
         <div className="mt-5 flex w-full items-center justify-between gap-10 flex-wrap">
           <button
             onClick={handleNext}
-            className="flex items-center justify-center gap-4.5 rounded-lg border border-primary bg-primary px-8.5 py-3 text-white transition-opacity hover:opacity-90"
+            className="flex items-center justify-center gap-4 rounded-lg border border-primary bg-primary px-8 py-3 text-white transition-opacity hover:opacity-90"
           >
             <div>Next</div>
             <img
@@ -129,7 +129,7 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
           <button
             onClick={onPrevious}
             disabled={isFirstStep}
-            className={`flex items-center justify-center gap-4.5 rounded-lg ${
+            className={`flex items-center justify-center gap-4 rounded-lg ${
               isFirstStep ? 'cursor-not-allowed opacity-40' : 'hover:opacity-70'
             }`}
           >
