@@ -18,8 +18,8 @@ const BlogArticlePage = () => {
         />
       </div>
 
-      <div className="flex w-full justify-center px-5 py-15 md:px-10 md:py-15 lg:px-25">
-        <div className="flex w-full max-w-[1240px] flex-col gap-15 lg:flex-row lg:gap-15">
+      <div className="flex w-full justify-center px-5 py-15 md:px-10 lg:px-25">
+        <div className="flex w-full max-w-[1240px] flex-col gap-10 lg:flex-row lg:gap-15">
           <ArticleContent />
           <ArticleSidebar />
         </div>
