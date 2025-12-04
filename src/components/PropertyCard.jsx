@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const PropertyCard = ({ image, title, price, bedrooms, bathrooms, area, floor }) => {
+const PropertyCard = ({ id, image, title, price, bedrooms, bathrooms, area, floor }) => {
   return (
-    <div className="flex flex-col rounded-lg overflow-hidden bg-white shadow-card hover:shadow-xl transition-shadow group">
+    <Link to={`/property/${id || '1'}`} className="flex flex-col rounded-lg overflow-hidden bg-white shadow-card hover:shadow-xl transition-shadow group">
       <div className="relative h-[300px] overflow-hidden">
         <img 
           src={image} 
@@ -62,7 +63,7 @@ const PropertyCard = ({ image, title, price, bedrooms, bathrooms, area, floor })
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
