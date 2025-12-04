@@ -52,7 +52,7 @@ const Navigation = () => {
             <div className="flex items-center gap-10">
               <Link to="/buy" className="text-base transition-colors hover:text-primary">Buy</Link>
               <Link to="/buy" className="text-base transition-colors hover:text-primary">Rent</Link>
-              <a href="#sell" className="text-base transition-colors hover:text-primary">Sell or Rent property</a>
+              <Link to="/sell" className="text-base transition-colors hover:text-primary">Sell or Rent property</Link>
               <Link to="/contact" className="text-base transition-colors hover:text-primary">Contact</Link>
               <div className="h-3 w-px bg-black"></div>
               <Link to="/finance" className="text-base transition-colors hover:text-primary">Finance</Link>
@@ -95,7 +95,7 @@ const Navigation = () => {
                   <Link to="/buy" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Rent</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
-                  <a href="#sell" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Sell or Rent property</a>
+                  <Link to="/sell" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Sell or Rent property</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
                   <Link to="/contact" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Contact</Link>
