@@ -26,7 +26,9 @@ const EstimateStepper = ({ steps, currentStep }) => {
         <img
           loading="lazy"
           src={
-            currentStep === 4
+            currentStep === 5
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/484403f22186ca7fa37e649428c4fbfdd956386e?placeholderIfAbsent=true"
+              : currentStep === 4
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/1f0283366261d188d176ddd444d9da95f803f000?placeholderIfAbsent=true"
               : currentStep === 3
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/c347aa61cc2b2cd9ca4bece569348ed61a79431b?placeholderIfAbsent=true"

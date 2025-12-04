@@ -5,6 +5,7 @@ import EstimateStep1 from './EstimateStep1';
 import EstimateStep2 from './EstimateStep2';
 import EstimateStep3 from './EstimateStep3';
 import EstimateStep4 from './EstimateStep4';
+import EstimateStep5 from './EstimateStep5';
 
 const EstimatePage = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -38,7 +39,9 @@ const EstimatePage = () => {
     balconyTerraceSurface: '',
     caveSurface: '',
     garageInteriorParking: '',
-    exteriorParking: ''
+    exteriorParking: '',
+    energyRatingHeating: '',
+    energyRatingInsulation: ''
   });
 
   const steps = [
@@ -109,6 +112,14 @@ const EstimatePage = () => {
                   onPrevious={handlePrevious}
                 />
               )}
+              {currentStep === 5 && (
+                <EstimateStep5
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  onNext={handleNext}
+                  onPrevious={handlePrevious}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -116,7 +127,9 @@ const EstimatePage = () => {
         <img
           loading="lazy"
           srcSet={
-            currentStep === 4
+            currentStep === 5
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1200 1200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1600 1600w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=2000 2000w"
+              : currentStep === 4
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=1200 1200w"
               : currentStep === 3
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=1200 1200w"
@@ -125,7 +138,9 @@ const EstimatePage = () => {
               : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=1200 1200w"
           }
           src={
-            currentStep === 4
+            currentStep === 5
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true"
+              : currentStep === 4
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true"
               : currentStep === 3
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true"
@@ -138,7 +153,7 @@ const EstimatePage = () => {
           style={{
             flexBasis: '200px',
             maxWidth: '600px',
-            aspectRatio: currentStep === 4 ? '0.86' : currentStep === 3 ? '0.65' : currentStep === 2 ? '0.61' : '0.82'
+            aspectRatio: currentStep === 5 ? '0.86' : currentStep === 4 ? '0.86' : currentStep === 3 ? '0.65' : currentStep === 2 ? '0.61' : '0.82'
           }}
         />
       </div>
