@@ -3,6 +3,8 @@ import Navigation from './Navigation';
 import EstimateStepper from './EstimateStepper';
 import EstimateStep1 from './EstimateStep1';
 import EstimateStep2 from './EstimateStep2';
+import EstimateStep3 from './EstimateStep3';
+import EstimateStep4 from './EstimateStep4';
 
 const EstimatePage = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -18,7 +20,25 @@ const EstimatePage = () => {
       greenSpaces: false,
       transports: false,
       schools: false
-    }
+    },
+    constructionYear: '',
+    livingSurface: '',
+    floors: '',
+    floor: '',
+    rooms: '',
+    bathrooms: '',
+    propertyStanding: 'Standard',
+    propertyCondition: 'Normal',
+    generalAmenities: {
+      lift: true,
+      spa: false,
+      smartHome: false,
+      alarm: false
+    },
+    balconyTerraceSurface: '',
+    caveSurface: '',
+    garageInteriorParking: '',
+    exteriorParking: ''
   });
 
   const steps = [
@@ -73,6 +93,22 @@ const EstimatePage = () => {
                   onPrevious={handlePrevious}
                 />
               )}
+              {currentStep === 3 && (
+                <EstimateStep3
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  onNext={handleNext}
+                  onPrevious={handlePrevious}
+                />
+              )}
+              {currentStep === 4 && (
+                <EstimateStep4
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  onNext={handleNext}
+                  onPrevious={handlePrevious}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -80,12 +116,20 @@ const EstimatePage = () => {
         <img
           loading="lazy"
           srcSet={
-            currentStep === 2
+            currentStep === 4
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=1200 1200w"
+              : currentStep === 3
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=1200 1200w"
+              : currentStep === 2
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=1200 1200w"
               : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=1200 1200w"
           }
           src={
-            currentStep === 2
+            currentStep === 4
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true"
+              : currentStep === 3
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true"
+              : currentStep === 2
               ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true"
               : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true"
           }
@@ -94,7 +138,7 @@ const EstimatePage = () => {
           style={{
             flexBasis: '200px',
             maxWidth: '600px',
-            aspectRatio: currentStep === 2 ? '0.61' : '0.82'
+            aspectRatio: currentStep === 4 ? '0.86' : currentStep === 3 ? '0.65' : currentStep === 2 ? '0.61' : '0.82'
           }}
         />
       </div>
