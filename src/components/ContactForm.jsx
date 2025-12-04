@@ -23,7 +23,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col gap-7 px-5 py-15 md:px-15 lg:px-30 lg:py-15">
+    <div className="flex w-full flex-col gap-7 px-5 py-15 md:px-15 lg:px-30 lg:py-15">
       <div className="flex flex-col gap-2.5">
         <h1 className="font-poppins text-[38px] font-bold leading-[44px] text-black">
           Contact us
