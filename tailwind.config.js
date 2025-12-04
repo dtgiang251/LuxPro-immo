@@ -17,6 +17,12 @@ export default {
       fontSize: {
         'hero': ['38px', '44px'],
       },
+      spacing: {
+        '13': '3.25rem',
+        '15': '3.75rem',
+        '25': '6.25rem',
+        '30': '7.5rem',
+      },
       boxShadow: {
         'card': '4px 10px 30px 0 rgba(0, 0, 0, 0.06)',
         'property': '0 25px 50px -12px rgba(0, 0, 0, 0.16)',
