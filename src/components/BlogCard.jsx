@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const BlogCard = ({ image, title, excerpt, variant = 'default' }) => {
+const BlogCard = ({ id, image, title, excerpt, variant = 'default' }) => {
+  const navigate = useNavigate();
+
+  const handleReadArticle = () => {
+    navigate(`/blog/${id}`);
+  };
+
   return (
     <div className={`flex ${variant === 'horizontal' ? 'flex-row gap-6' : 'flex-col gap-6'}`}>
       <img 
@@ -17,7 +24,7 @@ const BlogCard = ({ image, title, excerpt, variant = 'default' }) => {
             {excerpt}
           </p>
         </div>
-        <button className="flex items-center gap-1 self-start">
+        <button onClick={handleReadArticle} className="flex items-center gap-1 self-start hover:opacity-80 transition-opacity">
           <span className="text-center font-poppins text-xs font-semibold leading-4 text-primary">
             Read article
           </span>
