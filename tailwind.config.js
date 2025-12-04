@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: '#85053B',
         'text-gray': '#939393',
+        'dark': 'rgba(11, 13, 51, 1)',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -16,6 +17,12 @@ export default {
       },
       fontSize: {
         'hero': ['38px', '44px'],
+      },
+      spacing: {
+        '13': '3.25rem',
+        '15': '3.75rem',
+        '25': '6.25rem',
+        '30': '7.5rem',
       },
       boxShadow: {
         'card': '4px 10px 30px 0 rgba(0, 0, 0, 0.06)',

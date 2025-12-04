@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,11 +9,13 @@ const Navigation = () => {
       <nav className="w-full border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[1240px] px-5 py-3.5 md:px-10 lg:px-5">
           <div className="flex items-center justify-between gap-10 lg:gap-25">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/980a809e9d3eafef0d406e5078923c6bcd171de0?width=196"
-            alt="LUX-PRO-IMMO"
-            className="h-14 w-20 md:h-16 md:w-24"
-          />
+          <Link to="/">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/980a809e9d3eafef0d406e5078923c6bcd171de0?width=196"
+              alt="LUX-PRO-IMMO"
+              className="h-14 w-20 md:h-16 md:w-24"
+            />
+          </Link>
 
           <div className="hidden flex-1 flex-col items-end gap-4 lg:flex">
             <div className="flex items-center gap-10">
@@ -33,7 +36,12 @@ const Navigation = () => {
               </a>
 
               <div className="flex cursor-pointer items-center gap-2 text-xs">
-                <img src="https://api.builder.io/api/v1/image/assets/TEMP/flag-uk.png" alt="EN" className="h-7 w-7 rounded-full" />
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <path d="M0 7.54916V10.8333H4.69L0 7.54916ZM3.88667 25.8333H10.8333V20.9692L3.88667 25.8333ZM19.1667 20.97V25.8333H26.1125L19.1667 20.97ZM0 19.1667V22.4508L4.69167 19.1667H0ZM26.1142 4.16666H19.1667V9.03082L26.1142 4.16666ZM30 22.4517V19.1667H25.3075L30 22.4517ZM30 10.8333V7.54916L25.3092 10.8333H30ZM10.8333 4.16666H3.88667L10.8333 9.03082V4.16666Z" fill="black"/>
+                  <path d="M20.95 19.1667L29.0434 24.8342C29.4386 24.427 29.7227 23.9251 29.8684 23.3767L23.8559 19.1667H20.95ZM10.8334 19.1667H9.04919L0.956693 24.8333C1.39086 25.275 1.94753 25.5908 2.57169 25.7375L10.8334 19.9525V19.1667ZM19.1667 10.8333H20.9509L29.0434 5.16668C28.6017 4.71857 28.042 4.40503 27.4292 4.26251L19.1667 10.0475V10.8333ZM9.04919 10.8333L0.956693 5.16668C0.561654 5.57416 0.277371 6.07588 0.130859 6.62418L6.14336 10.8333H9.04919Z" fill="#CF1B2B"/>
+                  <path d="M30 17.5H17.5V25.8333H19.1667V20.97L26.1125 25.8333H26.6667C27.1094 25.8334 27.5477 25.745 27.9558 25.5735C28.3639 25.4019 28.7337 25.1505 29.0433 24.8342L20.95 19.1667H23.8558L29.8683 23.3767C29.9458 23.0958 30 22.805 30 22.5V22.4517L25.3075 19.1667H30V17.5ZM0 17.5V19.1667H4.69167L0 22.4508V22.5C0 23.4092 0.365833 24.2317 0.956667 24.8333L9.04917 19.1667H10.8333V19.9525L2.57167 25.7367C2.81667 25.795 3.07 25.8333 3.33333 25.8333H3.88667L10.8333 20.9692V25.8333H12.5V17.5H0ZM30 7.49999C30.0005 6.62664 29.6568 5.78828 29.0433 5.16666L20.9508 10.8333H19.1667V10.0475L27.4292 4.26249C27.1795 4.20126 26.9237 4.1691 26.6667 4.16666H26.1142L19.1667 9.03082V4.16666H17.5V12.5H30V10.8333H25.3092L30 7.54916V7.49999ZM10.8333 4.16666V9.03082L3.88667 4.16666H3.33333C2.89052 4.16646 2.45214 4.25483 2.04398 4.42657C1.63582 4.5983 1.26614 4.84993 0.956667 5.16666L9.04917 10.8333H6.14333L0.130833 6.62416C0.0481502 6.90891 0.00414451 7.2035 0 7.49999L0 7.54916L4.69 10.8333H0V12.5H12.5V4.16666H10.8333Z" fill="white"/>
+                  <path d="M17.5 12.5V4.16666H12.5V12.5H0V17.5H12.5V25.8333H17.5V17.5H30V12.5H17.5Z" fill="#CF1B2B"/>
+                </svg>
                 <span>EN</span>
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                   <path fillRule="evenodd" clipRule="evenodd" d="M2.64645 3.64645C2.84171 3.45118 3.15829 3.45118 3.35355 3.64645L5 5.29289L6.64645 3.64645C6.84171 3.45118 7.15829 3.45118 7.35355 3.64645C7.54882 3.84171 7.54882 4.15829 7.35355 4.35355L5.35355 6.35355C5.15829 6.54882 4.84171 6.54882 4.64645 6.35355L2.64645 4.35355C2.45118 4.15829 2.45118 3.84171 2.64645 3.64645Z" fill="black"/>
@@ -42,12 +50,12 @@ const Navigation = () => {
             </div>
 
             <div className="flex items-center gap-10">
-              <a href="#buy" className="text-base transition-colors hover:text-primary">Buy</a>
-              <a href="#rent" className="text-base transition-colors hover:text-primary">Rent</a>
-              <a href="#sell" className="text-base transition-colors hover:text-primary">Sell or Rent property</a>
-              <a href="#contact" className="text-base transition-colors hover:text-primary">Contact</a>
+              <Link to="/buy" className="text-base transition-colors hover:text-primary">Buy</Link>
+              <Link to="/buy" className="text-base transition-colors hover:text-primary">Rent</Link>
+              <Link to="/sell" className="text-base transition-colors hover:text-primary">Sell or Rent property</Link>
+              <Link to="/contact" className="text-base transition-colors hover:text-primary">Contact</Link>
               <div className="h-3 w-px bg-black"></div>
-              <a href="#finance" className="text-base transition-colors hover:text-primary">Finance</a>
+              <Link to="/finance" className="text-base transition-colors hover:text-primary">Finance</Link>
               <a href="#estimate" className="text-base">Estimate</a>
             </div>
           </div>
@@ -81,19 +89,19 @@ const Navigation = () => {
 
               <div className="relative rounded-b-lg bg-white px-5 py-5">
                 <div className="flex flex-col">
-                  <a href="#buy" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Buy</a>
+                  <Link to="/buy" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Buy</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
-                  <a href="#rent" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Rent</a>
+                  <Link to="/buy" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Rent</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
-                  <a href="#sell" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Sell or Rent property</a>
+                  <Link to="/sell" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Sell or Rent property</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
-                  <a href="#contact" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Contact</a>
+                  <Link to="/contact" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Contact</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
-                  <a href="#finance" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Finance</a>
+                  <Link to="/finance" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Finance</Link>
                   <div className="h-px w-full bg-gray-200"></div>
 
                   <a href="#estimate" className="py-5 text-center font-opensans text-base" onClick={() => setIsMenuOpen(false)}>Estimate</a>
@@ -140,13 +148,13 @@ const Navigation = () => {
             </div>
 
             <div className="grid flex-1 grid-cols-2 bg-white">
-              <button className="flex items-center justify-center gap-2 border-r border-gray-200 py-4">
+              <Link to="/finance" className="flex items-center justify-center gap-2 border-r border-gray-200 py-4" onClick={() => setIsMenuOpen(false)}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <circle cx="12" cy="12" r="10" stroke="black" strokeWidth="2"/>
                   <text x="12" y="16" textAnchor="middle" fontSize="14" fontWeight="bold" fill="black">€</text>
                 </svg>
                 <span className="font-poppins text-base font-bold">Finance</span>
-              </button>
+              </Link>
               <button className="flex items-center justify-center gap-2 py-4">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M19.2891 22.1953H4.71094C3.76641 22.1953 3 21.4266 3 20.482V3.51797C3 2.57344 3.76641 1.80469 4.71094 1.80469H19.2891C20.2336 1.80469 21 2.57344 21 3.51797V20.4844C21 21.4266 20.2336 22.1953 19.2891 22.1953Z" fill="black"/>
