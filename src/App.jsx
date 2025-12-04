@@ -9,6 +9,7 @@ import PropertyDetailPage from './components/PropertyDetailPage';
 import EstimatePage from './components/EstimatePage';
 import EstimateResultPage from './components/EstimateResultPage';
 import BlogPage from './components/BlogPage';
+import BlogArticlePage from './components/BlogArticlePage';
 
 function App() {
   return (
