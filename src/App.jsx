@@ -1,10 +1,10 @@
 import React from 'react';
-import ContactPage from './components/ContactPage';
+import FinancePage from './components/FinancePage';
 
 function App() {
   return (
     <div className="App">
-      <ContactPage />
+      <FinancePage />
     </div>
   );
 }
