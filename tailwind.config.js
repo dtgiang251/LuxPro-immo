@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: '#85053B',
         'text-gray': '#939393',
+        'dark': 'rgba(11, 13, 51, 1)',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

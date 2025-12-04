@@ -1,10 +1,10 @@
 import React from 'react';
-import BlogPage from './components/BlogPage';
+import BlogArticlePage from './components/BlogArticlePage';
 
 function App() {
   return (
     <div className="App">
-      <BlogPage />
+      <BlogArticlePage />
     </div>
   );
 }
