@@ -37,39 +37,13 @@ const ArticleSidebar = () => {
         </h3>
         <div className="flex flex-col gap-4">
           {relatedArticles.map((article) => (
-            <div key={article.id} className="flex gap-6">
-              <img 
-                src={article.image} 
-                alt={article.title}
-                className="h-auto w-full max-w-[188px] flex-1 rounded-lg object-cover"
-              />
-              <div className="flex flex-1 flex-col gap-5 py-5">
-                <div className="flex flex-col gap-2">
-                  <h4 className="font-poppins text-lg font-bold leading-6 text-black">
-                    {article.title}
-                  </h4>
-                  <p className="line-clamp-3 overflow-hidden text-ellipsis font-poppins text-base leading-[26px] text-text-gray">
-                    {article.excerpt}
-                  </p>
-                </div>
-                <button className="flex items-center gap-1 self-start">
-                  <span className="text-center font-poppins text-xs font-semibold leading-4 text-primary">
-                    Read article
-                  </span>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip0)">
-                      <path d="M14.1673 5.83334L5.83398 14.1667" stroke="#85053B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M6.66602 5.83334H14.166V13.3333" stroke="#85053B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0">
-                        <rect width="20" height="20" fill="white"/>
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <BlogCard
+              key={article.id}
+              image={article.image}
+              title={article.title}
+              excerpt={article.excerpt}
+              variant="horizontal"
+            />
           ))}
         </div>
       </div>
