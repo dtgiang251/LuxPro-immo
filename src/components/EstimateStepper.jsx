@@ -13,7 +13,7 @@ const EstimateStepper = ({ steps, currentStep }) => {
               <div className="flex flex-1 flex-col justify-center">
                 <div
                   className={`font-poppins text-xs font-semibold leading-tight tracking-[0.3px] ${
-                    currentStep === step.id ? 'text-primary' : 'text-gray-400'
+                    currentStep >= step.id ? 'text-primary' : 'text-gray-400'
                   }`}
                 >
                   {step.name}
@@ -25,7 +25,11 @@ const EstimateStepper = ({ steps, currentStep }) => {
 
         <img
           loading="lazy"
-          src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/a938896e4b8f1d06348bbd0fb96059f703c25b8a?placeholderIfAbsent=true"
+          src={
+            currentStep === 2
+              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/59e0052d659238b3ceb3e2dfbc136deba65d7832?placeholderIfAbsent=true"
+              : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/a938896e4b8f1d06348bbd0fb96059f703c25b8a?placeholderIfAbsent=true"
+          }
           alt=""
           className="mt-1.5 h-auto w-0.5 object-contain"
         />
