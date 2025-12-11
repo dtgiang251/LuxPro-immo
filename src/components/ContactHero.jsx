@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 
 const ContactHero = () => {
   return (
-    <section className="flex w-full flex-col border-b border-gray-200 lg:flex-row lg:items-stretch">
+    <section className="flex w-full flex-col border-b border-gray-200 lg:flex-row lg:items-stretch z-10">
       <div
         className="relative flex flex-1 items-end justify-center bg-cover bg-center lg:min-h-[817px]"
         style={{
