@@ -5,15 +5,15 @@ const EstimateStep5 = ({ formData, updateFormData, onNext, onPrevious }) => {
   const [energyRatingInsulation, setEnergyRatingInsulation] = useState(formData.energyRatingInsulation || '');
 
   const energyRatings = [
-    { label: 'A', color: '#397f3b', borderColor: '#397f3b', textColor: 'rgba(57, 127, 59, 1)', bgColor: '#fff' },
-    { label: 'B', color: '#63a04b', borderColor: 'rgba(99, 160, 75, 1)', textColor: 'rgba(99, 160, 75, 1)', bgColor: 'transparent' },
-    { label: 'C', color: '#8faf47', borderColor: 'rgba(143, 175, 71, 1)', textColor: 'rgba(143, 175, 71, 1)', bgColor: 'rgba(143, 175, 71, 1)' },
-    { label: 'D', color: '#d9d33e', borderColor: 'rgba(217, 211, 62, 1)', textColor: 'rgba(217, 211, 62, 1)', bgColor: 'transparent' },
-    { label: 'E', color: '#efcc16', borderColor: 'rgba(239, 204, 22, 1)', textColor: 'rgba(239, 204, 22, 1)', bgColor: 'transparent' },
-    { label: 'F', color: '#f6b647', borderColor: 'rgba(246, 182, 71, 1)', textColor: 'rgba(246, 182, 71, 1)', bgColor: 'transparent' },
-    { label: 'G', color: '#ef7a36', borderColor: 'rgba(239, 122, 54, 1)', textColor: 'rgba(239, 122, 54, 1)', bgColor: 'transparent' },
-    { label: 'H', color: '#e04b2b', borderColor: 'rgba(224, 75, 43, 1)', textColor: 'rgba(224, 75, 43, 1)', bgColor: 'transparent' },
-    { label: 'I', color: '#b72a29', borderColor: 'rgba(183, 42, 41, 1)', textColor: 'rgba(183, 42, 41, 1)', bgColor: 'transparent' }
+    { label: 'A', borderColor: '#397f3b', textColor: 'rgba(57,127,59,1)' },
+    { label: 'B', borderColor: 'rgba(99,160,75,1)', textColor: 'rgba(99,160,75,1)' },
+    { label: 'C', borderColor: 'rgba(143,175,71,1)', textColor: 'rgba(143,175,71,1)', bgColor: 'rgba(143,175,71,1)' },
+    { label: 'D', borderColor: 'rgba(217,211,62,1)', textColor: 'rgba(217,211,62,1)' },
+    { label: 'E', borderColor: 'rgba(239,204,22,1)', textColor: 'rgba(239,204,22,1)' },
+    { label: 'F', borderColor: 'rgba(246,182,71,1)', textColor: 'rgba(246,182,71,1)' },
+    { label: 'G', borderColor: 'rgba(239,122,54,1)', textColor: 'rgba(239,122,54,1)' },
+    { label: 'H', borderColor: 'rgba(224,75,43,1)', textColor: 'rgba(224,75,43,1)' },
+    { label: 'I', borderColor: 'rgba(183,42,41,1)', textColor: 'rgba(183,42,41,1)' }
   ];
 
   const handleRatingClick = (rating, type) => {
@@ -26,6 +26,21 @@ const EstimateStep5 = ({ formData, updateFormData, onNext, onPrevious }) => {
     }
   };
 
+  const getButtonStyle = (rating, activeValue) => {
+    const isActive = activeValue === rating.label;
+
+    return {
+      borderColor: rating.borderColor,
+      backgroundColor: isActive
+        ? rating.bgColor || rating.borderColor   // dùng bgColor nếu có, không thì dùng borderColor
+        : 'transparent',
+      color: isActive ? '#fff' : rating.textColor,
+      minWidth: 0,
+      flexBasis: 'calc((100% - 64px) / 9)',
+      transition: '0.2s'
+    };
+  };
+
   const handleNext = () => {
     updateFormData({
       energyRatingHeating,
@@ -36,10 +51,10 @@ const EstimateStep5 = ({ formData, updateFormData, onNext, onPrevious }) => {
 
   return (
     <div className="flex min-w-[240px] w-full flex-1 flex-col justify-start rounded-lg bg-white">
+
       <div className="flex w-full flex-col justify-start font-poppins">
-        <h3 className="text-lg font-bold leading-tight text-black">
-          Energy
-        </h3>
+        <h3 className="text-lg font-bold leading-tight text-black">Energy</h3>
+
         <div className="mt-2.5 flex w-full items-center justify-center gap-2.5 rounded-lg bg-gray-50 px-3.5 py-2.5">
           <div className="flex-1 text-xs font-normal leading-4 text-gray-400">
             Share essential details about your property's energy efficiency. Include information on energy ratings, insulation quality, heating systems, and any sustainable upgrades. Highlighting energy efficiency can increase the property's appeal and long-term savings potential!
@@ -56,69 +71,46 @@ const EstimateStep5 = ({ formData, updateFormData, onNext, onPrevious }) => {
 
       <div className="mt-6 flex min-h-px w-full bg-gray-200"></div>
 
+      {/* EPC SECTION */}
       <div className="mt-6 flex w-full flex-col justify-start font-poppins">
-        <div className="flex w-full flex-col justify-start">
-          <div className="text-sm font-semibold leading-none text-black">Energy Performance Certificate (EPC)</div>
-          <div className="mt-2 flex w-full flex-wrap items-start gap-2">
-            {energyRatings.map((rating) => (
-              <button
-                key={rating.label}
-                onClick={() => handleRatingClick(rating.label, 'heating')}
-                className={`flex min-h-10 flex-1 items-center justify-center gap-1 rounded-md border px-2.5 py-3 font-inter text-sm transition-all ${
-                  energyRatingHeating === rating.label
-                    ? rating.label === 'C'
-                      ? 'border-[1.4px] bg-[rgba(143,175,71,1)] text-white'
-                      : rating.label === 'A'
-                      ? 'border-[1.4px] border-[#397f3b] text-[rgba(57,127,59,1)]'
-                      : 'border text-current'
-                    : 'border text-current hover:opacity-70'
-                }`}
-                style={{
-                  borderColor: rating.borderColor,
-                  color: energyRatingHeating === rating.label && rating.label === 'C' ? '#fff' : rating.textColor,
-                  backgroundColor: energyRatingHeating === rating.label && rating.label === 'C' ? rating.bgColor : 'transparent',
-                  minWidth: '0',
-                  flexBasis: 'calc((100% - 64px) / 9)'
-                }}
-              >
-                {rating.label}
-              </button>
-            ))}
-          </div>
+        <div className="text-sm font-semibold leading-none text-black">Energy Performance Certificate (EPC)</div>
+
+        <div className="mt-2 flex w-full flex-wrap items-start gap-2">
+          {energyRatings.map((rating) => (
+            <button
+              key={rating.label}
+              onClick={() => handleRatingClick(rating.label, 'heating')}
+              className="flex min-h-10 flex-1 items-center justify-center rounded-md border-[1.5px] px-[10px] py-[10px] font-inter text-sm"
+              style={getButtonStyle(rating, energyRatingHeating)}
+            >
+              {rating.label}
+            </button>
+          ))}
         </div>
       </div>
 
+      {/* OVERALL BUILDING ENERGY RATING */}
       <div className="mt-6 flex w-full flex-col justify-start font-poppins">
-        <div className="flex w-full flex-col justify-start">
-          <div className="text-sm font-semibold leading-none text-black">Overall Building Energy Rating</div>
-          <div className="mt-2 flex w-full flex-wrap items-start gap-2">
-            {energyRatings.map((rating) => (
-              <button
-                key={rating.label}
-                onClick={() => handleRatingClick(rating.label, 'insulation')}
-                className={`flex min-h-10 flex-1 items-center justify-center gap-1 rounded-md border px-2.5 py-3 font-inter text-sm transition-all ${
-                  energyRatingInsulation === rating.label
-                    ? rating.label === 'A'
-                      ? 'border-[1.4px] border-[#397f3b] text-[rgba(57,127,59,1)]'
-                      : 'border text-current'
-                    : 'border text-current hover:opacity-70'
-                }`}
-                style={{
-                  borderColor: rating.borderColor,
-                  color: rating.textColor,
-                  minWidth: '0',
-                  flexBasis: 'calc((100% - 64px) / 9)'
-                }}
-              >
-                {rating.label}
-              </button>
-            ))}
-          </div>
+        <div className="text-sm font-semibold leading-none text-black">Overall Building Energy Rating</div>
+
+        <div className="mt-2 flex w-full flex-wrap items-start gap-2">
+          {energyRatings.map((rating) => (
+            <button
+              key={rating.label}
+              onClick={() => handleRatingClick(rating.label, 'insulation')}
+              className="flex min-h-10 flex-1 items-center justify-center rounded-md border-[1.5px] px-[10px] py-[10px] font-inter text-sm"
+              style={getButtonStyle(rating, energyRatingInsulation)}
+            >
+              {rating.label}
+            </button>
+          ))}
         </div>
       </div>
 
-      <div className="mt-6 flex w-full flex-col justify-start text-center font-poppins text-base font-normal leading-relaxed">
+      {/* FOOTER BUTTONS */}
+      <div className="mt-6 flex w-full flex-col justify-start text-center font-poppins text-base leading-relaxed">
         <div className="flex min-h-px w-full bg-gray-200"></div>
+
         <div className="mt-5 flex w-full items-center justify-between gap-10 flex-wrap">
           <button
             onClick={onPrevious}
@@ -132,9 +124,10 @@ const EstimateStep5 = ({ formData, updateFormData, onNext, onPrevious }) => {
             />
             <div className="text-primary">Previous</div>
           </button>
+
           <button
             onClick={handleNext}
-            className="flex items-center justify-center gap-4 rounded-lg border border-primary bg-primary px-8 py-3 text-white transition-opacity hover:opacity-90"
+            className="flex items-center justify-center gap-4 rounded-lg border border-primary bg-primary px-8 py-3 text-white hover:opacity-90"
           >
             <div>Next</div>
             <img

@@ -86,7 +86,7 @@ const EstimatePage = () => {
       <Navigation />
       
       <div className="flex w-full flex-wrap font-poppins">
-        <div className="flex flex-1 flex-col justify-center border-b border-gray-200 bg-white px-6 py-15 md:px-16 lg:px-25">
+        <div className="flex flex-1 flex-col justify-center border-b border-gray-200 bg-white px-6 pt-[3px] pb-[30px] md:px-16 lg:pl-[145px]">
           <div className="flex w-full max-w-[640px] flex-wrap items-start gap-7">
             <EstimateStepper steps={steps} currentStep={currentStep} />
             
@@ -176,7 +176,7 @@ const EstimatePage = () => {
           className="min-w-[240px] flex-1 object-cover"
           style={{
             flexBasis: '200px',
-            maxWidth: '600px',
+            maxWidth: '640px',
             aspectRatio: currentStep === 6 ? '0.86' : currentStep === 5 ? '0.86' : currentStep === 4 ? '0.86' : currentStep === 3 ? '0.65' : currentStep === 2 ? '0.61' : '0.82'
           }}
         />

@@ -57,96 +57,84 @@ const EstimateStep2 = ({ formData, updateFormData, onNext, onPrevious }) => {
       <div className="mt-6 flex w-full flex-col justify-start font-poppins">
         <div className="flex w-full flex-col justify-start">
           <div className="text-sm font-semibold capitalize leading-none text-black">Commune</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={commune}
-              onChange={(e) => {
-                setCommune(e.target.value);
-                updateFormData({ commune: e.target.value });
-              }}
-              placeholder="Locality, City, Commune"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+            <select
+            value={commune}
+            onChange={(e) => {
+              setCommune(e.target.value);
+              updateFormData({ commune: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="" disabled>
+              Locality, City, Commune
+            </option>
+            <option value="Locality">Locality</option>
+            <option value="City"> City</option>
+            <option value="Commune">Commune</option>
+          </select>
         </div>
       </div>
 
       <div className="mt-6 flex w-full flex-col justify-start font-poppins">
         <div className="flex w-full flex-col justify-start">
           <div className="text-sm font-semibold capitalize leading-none text-black">Exposure</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={exposure}
-              onChange={(e) => {
-                setExposure(e.target.value);
-                updateFormData({ exposure: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={commune}
+            onChange={(e) => {
+              setCommune(e.target.value);
+              updateFormData({ commune: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="" disabled>
+              -
+            </option>
+            <option value="Locality">Locality</option>
+            <option value="City"> City</option>
+            <option value="Commune">Commune</option>
+          </select>
         </div>
       </div>
 
       <div className="mt-6 flex w-full flex-col justify-start font-poppins">
         <div className="flex w-full flex-col justify-start">
           <div className="text-sm font-semibold capitalize leading-none text-black">View</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={view}
-              onChange={(e) => {
-                setView(e.target.value);
-                updateFormData({ view: e.target.value });
-              }}
-              placeholder="Not overlooked"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={commune}
+            onChange={(e) => {
+              setCommune(e.target.value);
+              updateFormData({ commune: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="" disabled>
+              Not overlooked
+            </option>
+            <option value="Locality">Locality</option>
+            <option value="City"> City</option>
+            <option value="Commune">Commune</option>
+          </select>
         </div>
       </div>
 
       <div className="mt-6 flex w-full flex-col justify-start font-poppins">
         <div className="flex w-full flex-col justify-start">
           <div className="text-sm font-semibold capitalize leading-none text-black">Environment</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={environment}
-              onChange={(e) => {
-                setEnvironment(e.target.value);
-                updateFormData({ environment: e.target.value });
-              }}
-              placeholder="Not overlooked"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={commune}
+            onChange={(e) => {
+              setCommune(e.target.value);
+              updateFormData({ commune: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="" disabled>
+              Not overlooked
+            </option>
+            <option value="Locality">Locality</option>
+            <option value="City"> City</option>
+            <option value="Commune">Commune</option>
+          </select>
         </div>
         <div className="mt-2.5 flex w-full items-center justify-center gap-2.5 rounded-lg bg-gray-50 px-3.5 py-2.5">
           <div className="flex-1 text-xs font-normal leading-4 text-gray-400">
