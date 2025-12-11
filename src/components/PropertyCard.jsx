@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PropertyCard = ({ id, image, title, price, bedrooms, bathrooms, area, floor }) => {
   return (
-    <Link to={`/property/${id || '1'}`} className="flex flex-col rounded-lg overflow-hidden bg-white shadow-card hover:shadow-xl transition-shadow group">
+    <Link to={`/property/${id || '1'}`} className="relative flex flex-col rounded-lg overflow-hidden bg-white shadow-card hover:shadow-xl transition-shadow group">
       <div className="relative h-[300px] overflow-hidden">
         <img 
           src={image} 
@@ -12,37 +12,43 @@ const PropertyCard = ({ id, image, title, price, bedrooms, bathrooms, area, floo
         />
       </div>
       
-      <div className="flex flex-col gap-3 p-4 border-2 border-primary rounded-b-lg">
-        <h3 className="text-black font-poppins text-lg font-semibold leading-6 min-h-[48px]">
-          {title}
-        </h3>
-        
+      <div className="flex flex-col gap-3 p-4 rounded-lg absolute bottom-2 left-2 right-2 bg-white">
+        <div className='flex gap-4 items-center'> 
+          <div className='w-[50%]'>
+            <h3 className="text-black font-poppins text-base font-normal leading-6 min-h-[48px]">
+              {title}
+            </h3>
+          </div>
+          <div className="w-[50%] text-black font-poppins text-lg font-semibold leading-6 text-right">
+            {price}
+          </div>
+        </div>
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 justify-between w-full">
             {bedrooms && (
               <div className="flex items-center gap-1.5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M3 7V17M17 7V17M3 10H17M3 7H17V17H3V7Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.7341 10.0256V9.65258C17.7341 8.96546 17.4227 8.3602 16.953 8.0102V3.94143C16.953 2.87092 16.1906 2 15.2537 2H4.74597C3.80896 2 3.04664 2.87092 3.04664 3.94143V8.01016C2.57691 8.36016 2.26554 8.96542 2.26554 9.65254V10.0255C1.78455 10.1702 1.42871 10.6713 1.42871 11.2657V15.6301C1.42871 16.3167 1.90354 16.8789 2.49772 16.9108V17.4273C2.49772 17.7436 2.72215 18 2.99897 18C3.27578 18 3.5002 17.7436 3.5002 17.4273V16.9123H16.4994V17.4273C16.4994 17.7436 16.7238 18 17.0006 18C17.2774 18 17.5019 17.7436 17.5019 17.4273V16.9108C18.0961 16.8788 18.5709 16.3167 18.5709 15.63V11.2657C18.5709 10.6713 18.2151 10.1702 17.7341 10.0256ZM4.04916 3.94143C4.04916 3.50245 4.36173 3.14534 4.74597 3.14534H15.2537C15.6379 3.14534 15.9504 3.50245 15.9504 3.94143V7.69267H15.2821V6.68328C15.2821 5.97677 14.7791 5.40196 14.1606 5.40196H11.4635C10.8451 5.40196 10.342 5.97677 10.342 6.68328V7.69267H9.65764V6.68328C9.65764 5.97677 9.15455 5.40196 8.53617 5.40196H5.83901C5.22059 5.40196 4.7175 5.97677 4.7175 6.68328V7.69267H4.04916V3.94143ZM14.2797 6.68324V7.55669C14.2797 7.63166 14.2262 7.69263 14.1606 7.69263H11.4635C11.3979 7.69263 11.3444 7.63162 11.3444 7.55669V6.68324C11.3444 6.60827 11.3979 6.5473 11.4635 6.5473H14.1606C14.2262 6.5473 14.2797 6.60827 14.2797 6.68324ZM8.65515 6.68324V7.55669C8.65515 7.63166 8.60175 7.69263 8.53617 7.69263H5.83901C5.77339 7.69263 5.72003 7.63162 5.72003 7.55669V6.68324C5.72003 6.60827 5.77342 6.5473 5.83901 6.5473H8.53617C8.60175 6.5473 8.65515 6.60827 8.65515 6.68324ZM3.26805 9.65254C3.26805 9.20339 3.5879 8.83801 3.98102 8.83801H16.0186C16.4118 8.83801 16.7316 9.20343 16.7316 9.65254V9.98334H3.26805V9.65254ZM17.5684 15.63C17.5684 15.7055 17.5147 15.767 17.4485 15.767H2.55109C2.48499 15.767 2.4312 15.7055 2.4312 15.63V11.2657C2.4312 11.1902 2.48497 11.1288 2.55109 11.1288H17.4486C17.5147 11.1288 17.5685 11.1902 17.5685 11.2657L17.5684 15.63Z" fill="black" stroke="black" stroke-width="0.380938" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
                 <span className="text-black font-poppins text-sm">{bedrooms}</span>
               </div>
             )}
             
             {bathrooms && (
               <div className="flex items-center gap-1.5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M17 10C17 10 17 8 15 8C13 8 13 10 13 10M3 10H17M5 10V14C5 15.1046 5.89543 16 7 16H13C14.1046 16 15 15.1046 15 14V10M7 16V18M13 16V18" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5709 9.66275C18.5709 8.82531 17.9396 8.14395 17.1635 8.14395H3.79049V3.20738C3.79049 2.6391 4.21886 2.17679 4.74542 2.17679H4.99542C5.25413 2.17679 5.4982 2.29028 5.67545 2.484L5.63307 2.52974C4.92131 3.29788 4.92131 4.54769 5.63307 5.31591L5.87451 5.5765C5.98096 5.69137 6.12047 5.74884 6.26006 5.74884C6.39965 5.74884 6.53909 5.69145 6.6456 5.5765L9.02951 3.0037C9.24239 2.77397 9.24239 2.40135 9.02951 2.17161L8.78806 1.91103C8.44332 1.53889 7.98487 1.334 7.49732 1.334C7.1246 1.334 6.76914 1.45406 6.46828 1.67667C6.08747 1.25054 5.55783 1 4.9955 1H4.7455C3.61768 1 2.7001 1.9902 2.7001 3.20746V8.15147C1.98767 8.22554 1.42871 8.87502 1.42871 9.66283C1.42871 10.3071 1.803 10.8577 2.32881 11.0779V13.0172C2.32881 14.7276 3.45685 16.1591 4.95222 16.4908L4.48447 16.9956C4.27159 17.2254 4.27159 17.5979 4.48447 17.8277C4.59091 17.9425 4.73042 18 4.87001 18C5.0096 18 5.14904 17.9426 5.25555 17.8277L6.42778 16.5632H13.5716L14.7441 17.8277C14.8505 17.9425 14.99 18 15.1297 18C15.2692 18 15.4088 17.9426 15.5152 17.8277C15.7281 17.5979 15.7281 17.2254 15.5152 16.9956L15.0475 16.4908C16.543 16.1591 17.671 14.7277 17.671 13.0172V11.0779C18.1966 10.8575 18.5709 10.3071 18.5709 9.66275ZM7.49732 2.51071C7.62378 2.51071 7.7453 2.54487 7.85286 2.60923L6.28046 4.30621C6.12632 4.00467 6.16758 3.61707 6.40423 3.36175L6.97759 2.74296C7.11643 2.5932 7.30102 2.51071 7.49732 2.51071ZM2.83609 9.32081H17.1635C17.3383 9.32081 17.4805 9.47422 17.4805 9.66291C17.4805 9.85145 17.3383 10.0049 17.1635 10.0049H2.83609C2.66132 10.0049 2.51917 9.85145 2.51917 9.66291C2.51917 9.47422 2.66132 9.32081 2.83609 9.32081ZM16.5803 13.0171C16.5803 14.3235 15.5954 15.3864 14.3848 15.3864H5.61476C4.40413 15.3864 3.4192 14.3236 3.4192 13.0171V11.1986H16.5803V13.0171Z" fill="black" stroke="black" stroke-width="0.285704" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
                 <span className="text-black font-poppins text-sm">{bathrooms}</span>
               </div>
             )}
             
             {area && (
               <div className="flex items-center gap-1.5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M3 3H17V17H3V3Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M3 3L17 17M17 3L3 17" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.60889 4.34783V16.5217C2.60889 17.4809 3.38889 18.2609 4.34802 18.2609H16.5219C17.4811 18.2609 18.2611 17.4809 18.2611 16.5217V4.34783C18.2611 3.3887 17.4811 2.6087 16.5219 2.6087H4.34802C3.38889 2.6087 2.60889 3.3887 2.60889 4.34783ZM16.5237 16.5217H4.34802V4.34783H16.5219L16.5237 16.5217Z" fill="black"/>
+                <path d="M13.0434 10.4348H14.7826V6.08694H10.4347V7.82607H13.0434V10.4348ZM10.4347 13.0435H7.82604V10.4348H6.08691V14.7826H10.4347V13.0435Z" fill="black"/>
+                </svg> 
                 <span className="text-black font-poppins text-sm">{area} m²</span>
               </div>
             )}
@@ -58,9 +64,7 @@ const PropertyCard = ({ id, image, title, price, bedrooms, bathrooms, area, floo
             )}
           </div>
           
-          <div className="text-black font-poppins text-lg font-bold">
-            {price}
-          </div>
+          
         </div>
       </div>
     </Link>

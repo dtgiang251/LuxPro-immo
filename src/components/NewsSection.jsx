@@ -28,8 +28,8 @@ const NewsSection = () => {
       <div className="mx-auto max-w-[1240px] px-5 py-15 md:px-10 lg:px-5 lg:py-25">
         <div className="flex flex-col gap-12">
         <div className="flex flex-col items-center justify-between gap-5 md:flex-row md:items-center">
-          <div className="flex flex-col gap-3">
-            <svg className="self-stretch" width="1067" height="30" viewBox="0 0 1067 30" fill="none">
+          <div className="flex flex-col gap-3 md:w-[70%]">
+            <svg className="self-stretch" width="" height="30" viewBox="0 0 1067 30" fill="none">
               <path d="M0.996712 22.0255H0V6.82691L9.96622 0L24.218 9.91644V22.0255H9.96622V20.6302H22.9224V10.3151L9.96622 1.49495L0.996712 7.67403V22.0255Z" fill="#B6B8B5"/>
               <path d="M10.0161 14.3018H3.83691V23.7199L10.0161 29.9986V14.3018Z" fill="#85053B"/>
               <text fill="#85053B" x="44.2178" y="21.299" fontFamily="Poppins" fontSize="18" fontWeight="800" letterSpacing="0.175em">NEWS & BLOGS</text>
