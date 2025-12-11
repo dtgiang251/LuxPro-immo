@@ -4,7 +4,8 @@ import BuyHero from './BuyHero';
 import BuySearchBar from './BuySearchBar';
 import BuyPropertyGrid from './BuyPropertyGrid';
 import BuyPagination from './BuyPagination';
-import FinanceCTA from './FinanceCTA';
+//import FinanceCTA from './FinanceCTA';
+import CTASection from './CTASection';
 import Footer from './Footer';
 
 const BuyPage = () => {
@@ -15,7 +16,7 @@ const BuyPage = () => {
       <BuySearchBar />
       <BuyPropertyGrid />
       <BuyPagination />
-      <FinanceCTA />
+      <CTASection />
       <Footer />
     </div>
   );
