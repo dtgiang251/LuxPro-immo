@@ -4,7 +4,7 @@ const BuyPagination = () => {
   const pages = [1, 2, 3, '...', 8, 9, 10];
 
   return (
-    <div className="flex justify-between items-center px-6 md:px-12 lg:px-25 pb-12">
+    <div className="flex justify-between items-center mx-auto max-w-[1240px] px-6 pb-12">
       <button className="flex items-center gap-2 text-primary font-poppins text-base hover:underline">
         Previous
       </button>
@@ -13,7 +13,7 @@ const BuyPagination = () => {
         {pages.map((page, index) => (
           <button
             key={index}
-            className={`w-[30px] h-[30px] flex items-center justify-center rounded-lg font-poppins text-base ${
+            className={`w-[30px] h-[30px] flex items-center justify-center rounded-full font-poppins text-base ${
               page === 1
                 ? 'bg-primary text-white'
                 : 'text-primary hover:bg-gray-100'

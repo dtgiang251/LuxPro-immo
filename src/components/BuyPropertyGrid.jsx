@@ -5,7 +5,7 @@ const BuyPropertyGrid = () => {
   const properties = [
     {
       id: 1,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property1.jpg?width=600',
+      image: './src/public/thumbnail01.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: 3,
@@ -15,7 +15,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 2,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property2.jpg?width=600',
+      image: './src/public/thumbnail02.png',
       title: 'Apartment for sale in Esch-sur-Alzette',
       price: '410000 €',
       bedrooms: 3,
@@ -25,7 +25,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 3,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property3.jpg?width=600',
+      image: './src/public/thumbnail03.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: null,
@@ -35,7 +35,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 4,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property4.jpg?width=600',
+      image: './src/public/thumbnail04.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: 3,
@@ -45,7 +45,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 5,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property5.jpg?width=600',
+      image: './src/public/thumbnail05.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: 3,
@@ -55,7 +55,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 6,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property6.jpg?width=600',
+      image: './src/public/thumbnail06.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: 3,
@@ -65,7 +65,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 7,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property7.jpg?width=600',
+      image: './src/public/thumbnail07.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: 3,
@@ -75,7 +75,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 8,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property8.jpg?width=600',
+      image: './src/public/thumbnail08.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: 3,
@@ -85,7 +85,7 @@ const BuyPropertyGrid = () => {
     },
     {
       id: 9,
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/property9.jpg?width=600',
+      image: './src/public/thumbnail09.png',
       title: 'House for sale in Zoufftgen (FR)',
       price: '14950000 €',
       bedrooms: 3,
@@ -96,7 +96,7 @@ const BuyPropertyGrid = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-10 px-6 py-12 md:px-12 md:py-20 lg:px-25">
+    <div className="mx-auto max-w-[1240px] flex flex-col gap-10 px-6 py-12 md:py-20">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5">
         <div className="flex items-center gap-5">
           <div className="flex items-center gap-1">
@@ -113,11 +113,25 @@ const BuyPropertyGrid = () => {
 
         <div className="flex items-center gap-2">
           <span className="text-black font-roboto text-sm">Sort by:</span>
-          <select className="w-36 h-9 rounded-md bg-white border border-gray-300 px-3 text-sm">
-            <option>Default</option>
-            <option>Price: Low to High</option>
-            <option>Price: High to Low</option>
-          </select>
+           
+
+          <div className="relative flex items-center gap-6">
+            <select 
+              className="h-9 appearance-none pr-8 rounded-md bg-white border border-gray-300 px-3 text-sm font-poppins leading-[26px] bg-transparent cursor-pointer outline-none"
+            >
+              <option>Default</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+            <span className="absolute right-2 pointer-events-none">
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 0.75L6.75 6.75L12.75 0.75" stroke="#939393" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
+          </div>
+
+
+
         </div>
       </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const SellGuidance = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-25 self-stretch bg-white px-6 py-12 lg:px-0 lg:py-30 lg:pr-25">
+    <div className="max-w-[1240px] m-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-25 self-stretch bg-white px-6 py-12 lg:py-30">
       <div className="flex items-center gap-3.5 w-full lg:w-[700px] h-auto lg:h-[577px] relative">
         <div className="w-[342.6px] h-[420.209px] bg-primary absolute left-0 top-0 hidden lg:block"></div>
         <img 
@@ -31,7 +31,7 @@ const SellGuidance = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-5 flex-1 lg:px-25">
+      <div className="flex flex-col items-start gap-5 flex-1">
         <div className="flex flex-col items-start gap-3.5 self-stretch">
           <div className="flex items-center gap-5 self-stretch">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
