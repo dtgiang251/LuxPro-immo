@@ -63,31 +63,33 @@ const EstimateStep3 = ({ formData, updateFormData, onNext, onPrevious }) => {
       <div className="mt-6 flex min-h-px w-full bg-gray-200"></div>
 
       <div className="mt-6 flex w-full items-start gap-6 font-poppins">
+        
+        {/* Construction year */}
         <div className="flex flex-1 flex-col justify-start">
-          <div className="text-sm font-semibold leading-none text-black">Construction year</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={constructionYear}
-              onChange={(e) => {
-                setConstructionYear(e.target.value);
-                updateFormData({ constructionYear: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
+          <div className="text-sm font-semibold leading-none text-black">
+            Construction year
           </div>
+          <select
+            value={constructionYear}
+            onChange={(e) => {
+              setConstructionYear(e.target.value);
+              updateFormData({ constructionYear: e.target.value });
+            }}
+            className="w-full text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">-</option>
+            <option value="2000">2000</option>
+            <option value="2005">2005</option>
+            <option value="2010">2010</option>
+          </select>
         </div>
 
+        {/* Living surface */}
         <div className="flex flex-1 flex-col justify-start">
-          <div className="text-sm font-semibold leading-none text-black">Living surface</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
+          <div className="text-sm font-semibold leading-none text-black">
+            Living surface
+          </div>
+          <div className="mt-2 flex items-center border border-gray-200 py-3 px-3 w-full">
             <input
               type="text"
               value={livingSurface}
@@ -96,150 +98,138 @@ const EstimateStep3 = ({ formData, updateFormData, onNext, onPrevious }) => {
                 updateFormData({ livingSurface: e.target.value });
               }}
               placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
+              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400 w-full"
             />
             <div className="text-base leading-relaxed text-gray-400">㎡</div>
           </div>
         </div>
       </div>
 
+
+
+
+      {/* Floors + Floor */}
       <div className="mt-6 flex w-full items-start gap-6 font-poppins">
+        
+        {/* Floors */}
         <div className="flex flex-1 flex-col justify-start">
           <div className="text-sm font-semibold leading-none text-black">Floors</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={floors}
-              onChange={(e) => {
-                setFloors(e.target.value);
-                updateFormData({ floors: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={floors}
+            onChange={(e) => {
+              setFloors(e.target.value);
+              updateFormData({ floors: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
 
+        {/* Floor */}
         <div className="flex flex-1 flex-col justify-start">
           <div className="text-sm font-semibold leading-none text-black">Floor</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={floor}
-              onChange={(e) => {
-                setFloor(e.target.value);
-                updateFormData({ floor: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={floor}
+            onChange={(e) => {
+              setFloor(e.target.value);
+              updateFormData({ floor: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
       </div>
 
+
+      {/* Rooms + Bathrooms */}
       <div className="mt-6 flex w-full items-start gap-6 font-poppins">
+        
+        {/* Rooms */}
         <div className="flex flex-1 flex-col justify-start">
           <div className="text-sm font-semibold leading-none text-black">Rooms</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={rooms}
-              onChange={(e) => {
-                setRooms(e.target.value);
-                updateFormData({ rooms: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={rooms}
+            onChange={(e) => {
+              setRooms(e.target.value);
+              updateFormData({ rooms: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
 
+        {/* Bathrooms */}
         <div className="flex flex-1 flex-col justify-start">
           <div className="text-sm font-semibold leading-none text-black">Bathrooms</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={bathrooms}
-              onChange={(e) => {
-                setBathrooms(e.target.value);
-                updateFormData({ bathrooms: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={bathrooms}
+            onChange={(e) => {
+              setBathrooms(e.target.value);
+              updateFormData({ bathrooms: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
       </div>
 
+
+      {/* Property standing + Property condition */}
       <div className="mt-6 flex w-full items-start gap-6 font-poppins">
+        
+        {/* Standing */}
         <div className="flex flex-1 flex-col justify-start">
           <div className="text-sm font-semibold leading-none text-black">Property standing</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={propertyStanding}
-              onChange={(e) => {
-                setPropertyStanding(e.target.value);
-                updateFormData({ propertyStanding: e.target.value });
-              }}
-              placeholder="Standard"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={propertyStanding}
+            onChange={(e) => {
+              setPropertyStanding(e.target.value);
+              updateFormData({ propertyStanding: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">Standard</option>
+            <option value="standard">Standard</option>
+            <option value="good">Good</option>
+            <option value="luxury">Luxury</option>
+          </select>
         </div>
 
+        {/* Condition */}
         <div className="flex flex-1 flex-col justify-start">
           <div className="text-sm font-semibold leading-none text-black">Property condition</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={propertyCondition}
-              onChange={(e) => {
-                setPropertyCondition(e.target.value);
-                updateFormData({ propertyCondition: e.target.value });
-              }}
-              placeholder="Normal"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={propertyCondition}
+            onChange={(e) => {
+              setPropertyCondition(e.target.value);
+              updateFormData({ propertyCondition: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">Normal</option>
+            <option value="normal">Normal</option>
+            <option value="good">Good</option>
+            <option value="needs-renovation">Needs renovation</option>
+          </select>
         </div>
       </div>
+
 
       <div className="mt-6 flex w-full flex-col justify-start">
         <div className="text-sm font-semibold capitalize leading-none text-black font-poppins">
@@ -251,7 +241,7 @@ const EstimateStep3 = ({ formData, updateFormData, onNext, onPrevious }) => {
           </div>
         </div>
         <div className="mt-3 flex w-full flex-wrap items-start gap-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mr-[10px]">
             <button
               onClick={() => handleToggle('lift')}
               className={`flex h-5 w-8 items-center overflow-hidden rounded-full p-0.5 transition-colors ${
@@ -267,7 +257,7 @@ const EstimateStep3 = ({ formData, updateFormData, onNext, onPrevious }) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mr-[10px]">
             <button
               onClick={() => handleToggle('spa')}
               className={`flex h-5 w-8 items-center overflow-hidden rounded-full p-0.5 transition-colors ${
@@ -283,7 +273,7 @@ const EstimateStep3 = ({ formData, updateFormData, onNext, onPrevious }) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mr-[10px]">
             <button
               onClick={() => handleToggle('smartHome')}
               className={`flex h-5 w-8 items-center overflow-hidden rounded-full p-0.5 transition-colors ${

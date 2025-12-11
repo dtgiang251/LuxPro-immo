@@ -28,7 +28,7 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
         <h3 className="font-poppins text-lg font-bold text-black">
           Discover how much your property is worth
         </h3>
-        <div className="mt-2.5 flex w-full items-center justify-center gap-2.5 rounded-lg bg-gray-50 px-3.5 py-2.5">
+        <div className="mt-3 flex w-full items-center justify-center gap-2.5 rounded-lg bg-gray-50 px-3.5 py-2.5">
           <div className="flex-1 font-poppins text-xs font-normal text-gray-400">
             Please specify the type and subtype of the property you're referring to.
           </div>
@@ -53,7 +53,7 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
           <div className="flex w-full flex-col justify-start">
             <button
               onClick={() => handleTypeSelect('apartment')}
-              className={`flex min-h-[48px] w-full items-center justify-start gap-2 rounded-md px-3.5 py-3.5 font-poppins text-sm font-normal leading-snug ${
+              className={`flex min-h-[48px] w-full justify-start gap-2 rounded-md px-3.5 py-3.5 font-poppins text-sm font-normal leading-snug ${
                 selectedType === 'apartment'
                   ? 'bg-primary text-white'
                   : 'border border-gray-300 text-black'
@@ -65,7 +65,7 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
                 alt=""
                 className="h-5 w-5 object-contain"
               />
-              <div className="flex-1">Apartment</div>
+              <div className="flex-1 text-left">Apartment</div>
             </button>
 
             {selectedType === 'apartment' && (
@@ -78,7 +78,7 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
                     <button
                       key={subtype}
                       onClick={() => handleSubtypeSelect(subtype)}
-                      className={`flex flex-1 items-center justify-center gap-4 rounded-md border border-gray-300 px-2.5 py-2.5 transition-colors ${
+                      className={`flex flex-1 items-center justify-center gap-4 rounded-md border border-gray-300 px-2 py-2 transition-colors ${
                         selectedSubtype === subtype
                           ? 'border-primary bg-primary/10'
                           : 'hover:border-gray-400'
@@ -106,7 +106,7 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
               alt=""
               className="h-5 w-5 object-contain"
             />
-            <div className="flex-1">House</div>
+            <div className="flex-1 text-left">House</div>
           </button>
         </div>
       </div>
@@ -125,21 +125,6 @@ const EstimateStep1 = ({ formData, updateFormData, onNext, onPrevious, isFirstSt
               alt=""
               className="h-2.5 w-3 object-contain"
             />
-          </button>
-          <button
-            onClick={onPrevious}
-            disabled={isFirstStep}
-            className={`flex items-center justify-center gap-4 rounded-lg ${
-              isFirstStep ? 'cursor-not-allowed opacity-40' : 'hover:opacity-70'
-            }`}
-          >
-            <div className="flex h-2.5 w-3 items-center justify-center border border-primary bg-white">
-              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" className="rotate-180">
-                <path d="M7 1L11 5L7 9" stroke="#85053b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M1 5H11" stroke="#85053b" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <div className="text-primary">Previous</div>
           </button>
         </div>
       </div>
