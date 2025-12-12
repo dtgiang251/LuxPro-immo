@@ -2,16 +2,16 @@ import React from 'react';
 
 const CTASection = () => {
   return (
-    <section className="relative h-[495px] overflow-hidden bg-[#F9FAFB]">
-      <div className="mx-auto max-w-[1240px] px-5 md:px-10 lg:px-5 relative">
-        <img className='absolute z-10 top-0 left-[50%]' alt="" src="./src/public/before-img01.svg"/> 
-        <div className="relative flex py-24" style={{background:"url('./src/public/bg01.svg') no-repeat center/cover"}}>
-        <div className="flex w-full max-w-[513px] flex-col gap-13 relative">          
+    <section className="relative md:h-[495px] overflow-hidden bg-[#F9FAFB]">
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-5 relative pb-30 md:pb-0">
+        <img className='absolute z-10 top-0 left-[45%]' alt="" src="./src/public/before-img01.svg"/> 
+        <div className="relative md:flex pt-[60px] md:pt-24 pb-0 md:py-24" style={{background:"url('./src/public/bg01.svg') no-repeat center/cover"}}>
+        <div className="flex w-full md:max-w-[513px] flex-col gap-13 relative z-10">          
           <div className="flex flex-col gap-5">
-            <h2 className="font-poppins text-[38px] font-bold leading-[44px]">
+            <h2 className="text-center md:text-left font-poppins text-[38px] font-bold leading-[44px]">
               Let's turn your property dreams into reality together!
             </h2>
-            <p className="text-base leading-[26px]">
+            <p className="text-center md:text-left text-base leading-[26px]">
               Let our team assess your property's value—we'll reach out within 12 working hours to discuss your needs in detail.
             </p>
           </div>
@@ -30,7 +30,7 @@ const CTASection = () => {
             </button>
           </div>
         </div>
-        <div className="absolute right-0 top-0 hidden h-[495px] w-[757px] lg:block">
+        <div className="md:absolute right-0 bottom-0 md:top-0 block md:h-[495px] md:w-[757px]">
           <img 
             src="https://api.builder.io/api/v1/image/assets/TEMP/e6b13266676a14730d654d7141f6c23f77ec40c5?width=1514" 
             alt="House" 

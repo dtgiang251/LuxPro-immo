@@ -52,30 +52,32 @@ const AboutSection = () => {
 
   return (
     <section className="bg-gray-50">
-      <div className="mx-auto max-w-[1240px] px-5 py-20 md:px-10 lg:px-5 lg:py-30">
-        <div className="flex flex-col gap-10 lg:flex-row lg:gap-25">
-          <div className="flex flex-1 flex-col gap-5">
-            <div className="flex flex-col gap-3.5">
-              <svg className="self-stretch" width="540" height="30" viewBox="0 0 540 30" fill="none">
+      <div className="mx-auto max-w-[1280px] px-5 py-[60px] md:py-20 md:px-10 lg:px-5 lg:py-30">
+        <div className="flex flex-col gap-10 md:flex-row lg:gap-25">
+          <div className="flex flex-1 flex-col gap-5 md:w-[55%]">
+            <div className="flex flex-col gap-3.5"> 
+              <h2 className='justify-center md:justify-start flex gap-5 font-poppins font-extrabold text-[18px] leading-[27px] tracking-[0.175em] uppercase text-[#85053B]'>
+                <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.996712 22.0255H0V6.82691L9.96622 0L24.218 9.91644V22.0255H9.96622V20.6302H22.9224V10.3151L9.96622 1.49495L0.996712 7.67403V22.0255Z" fill="#B6B8B5"/>
-                <path d="M10.0161 14.3018H3.83691V23.7199L10.0161 29.9986V14.3018Z" fill="#85053B"/>
-                <text fill="#85053B" x="44.2178" y="21.299" fontFamily="Poppins" fontSize="18" fontWeight="800" letterSpacing="0.175em">WHO ARE WE</text>
-              </svg>
-              <h2 className="font-poppins text-[38px] font-bold leading-[44px]">
+                <path d="M10.0161 14.3016H3.83691V23.7197L10.0161 29.9985V14.3016Z" fill="#85053B"/>
+                </svg>
+                WHO ARE WE
+              </h2>
+              <h2 className="text-center md:text-left font-poppins text-[38px] font-bold leading-[44px]">
                 Reliable real estate services for Luxembourg
               </h2>
             </div>
 
-            <p className="text-base leading-[26px] text-text-gray">
+            <p className="text-center md:text-left text-base leading-[26px] text-text-gray">
               Established in 2008, Lux-Pro-Immo is your reliable partner for all real estate needs. Choose a trusted real estate professional for buying, selling, or renting homes, commercial properties, or land.
             </p>
 
             <p className="font-opensans text-sm font-bold leading-[14px] text-text-gray">Our Strengths</p>
 
-            <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2 mb-10 md:mb-0">
               {strengths.map((strength, index) => (
-                <div key={index} className="flex gap-4 rounded-lg bg-white px-5 py-4 shadow-card">
-                  <div className="flex-shrink-0">{strength.icon}</div>
+                <div key={index} className="text-center md:text-left rounded-lg bg-white px-5 py-4 shadow-card">
+                  <div className="flex justify-center md:justify-start md:block flex-shrink-0 mb-4">{strength.icon}</div>
                   <div className="flex flex-col gap-1">
                     <h3 className="font-poppins text-lg font-bold leading-6">{strength.title}</h3>
                     <p className="text-base leading-[26px] text-text-gray">{strength.description}</p>
@@ -85,14 +87,14 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="relative flex gap-[14px] items-center">
-            <div className="w-[35%] grid gap-[14px]">
+          <div className="relative flex gap-[14px] items-center md:w-[45%]">
+            <div className="lg:w-[35%] hidden lg:grid gap-[14px]">
               <img className='' alt="" src="./src/public/img01.jpg"/>
               <img className='' alt="" src="./src/public/img02.jpg"/> 
             </div>
-            <div className='w-[65%] relative'>
+            <div className='w-full lg:w-[65%] relative'>
                 <div className='bg-[#85053B] max-w-[300px] w-full h-10 absolute right-0 top-[-40px]'></div>
-                <img className='relative z-10' alt="" src="./src/public/img03.jpg"/> 
+                <img className='relative z-10 w-full md:w-auto' alt="" src="./src/public/img03.jpg"/> 
                 <img className='absolute bottom-[-80px] right-0' alt="" src="./src/public/shadown.svg"/> 
                  
             </div> 
