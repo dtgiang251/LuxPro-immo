@@ -52,7 +52,7 @@ const EstimateStep6 = ({ formData, updateFormData, onPrevious, onSubmit }) => {
                 updateFormData({ email: e.target.value });
               }}
               placeholder="Example@gmail.com"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
+              className="flex-1 text-base leading-relaxed text-gray-400 w-full outline-none placeholder:text-gray-400"
             />
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3.33333 3.33337H16.6667C17.5833 3.33337 18.3333 4.08337 18.3333 5.00004V15C18.3333 15.9167 17.5833 16.6667 16.6667 16.6667H3.33333C2.41667 16.6667 1.66667 15.9167 1.66667 15V5.00004C1.66667 4.08337 2.41667 3.33337 3.33333 3.33337Z" stroke="#939393" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -72,7 +72,7 @@ const EstimateStep6 = ({ formData, updateFormData, onPrevious, onSubmit }) => {
                 updateFormData({ phoneNumber: e.target.value });
               }}
               placeholder="012-123456"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
+              className="flex-1 text-base leading-relaxed text-gray-400 outline-none w-full placeholder:text-gray-400"
             />
             <img
               loading="lazy"
@@ -95,12 +95,14 @@ const EstimateStep6 = ({ formData, updateFormData, onPrevious, onSubmit }) => {
               updateFormData({ fullName: e.target.value });
             }}
             placeholder="Rudolphe Aben"
-            className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none w-full placeholder:text-gray-400"
           />
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 10C12.0711 10 13.75 8.32107 13.75 6.25C13.75 4.17893 12.0711 2.5 10 2.5C7.92893 2.5 6.25 4.17893 6.25 6.25C6.25 8.32107 7.92893 10 10 10Z" stroke="#939393" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M17.0834 17.5C17.0834 14.2784 13.9518 11.6667 10.0001 11.6667C6.04841 11.6667 2.91675 14.2784 2.91675 17.5" stroke="#939393" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect opacity="0.01" width="20" height="20" fill="#939393"/>
+          <path d="M9.99935 9.16667C11.8403 9.16667 13.3327 7.67428 13.3327 5.83333C13.3327 3.99238 11.8403 2.5 9.99935 2.5C8.1584 2.5 6.66602 3.99238 6.66602 5.83333C6.66602 7.67428 8.1584 9.16667 9.99935 9.16667Z" fill="#939393"/>
+          <path d="M14.9993 17.5C15.4596 17.5 15.8327 17.1269 15.8327 16.6667C15.8327 13.445 13.221 10.8333 9.99935 10.8333C6.77769 10.8333 4.16602 13.445 4.16602 16.6667C4.16602 17.1269 4.53911 17.5 4.99935 17.5H14.9993Z" fill="#939393"/>
           </svg>
+
         </div>
       </div>
 

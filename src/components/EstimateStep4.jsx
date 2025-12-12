@@ -76,51 +76,47 @@ const EstimateStep4 = ({ formData, updateFormData, onNext, onPrevious }) => {
         </div>
       </div>
 
-      <div className="mt-6 flex w-full flex-col justify-start font-poppins">
-        <div className="flex w-full flex-col justify-start">
-          <div className="text-sm font-semibold leading-none text-black">garage(s) or interior parking(s)</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={garageInteriorParking}
-              onChange={(e) => {
-                setGarageInteriorParking(e.target.value);
-                updateFormData({ garageInteriorParking: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+     <div className="mt-6 flex w-full flex-col justify-start font-poppins">
+      <div className="flex w-full flex-col justify-start">
+        <div className="text-sm font-semibold leading-none text-black">
+          garage(s) or interior parking(s)
         </div>
+          <select
+            value={garageInteriorParking}
+            onChange={(e) => {
+              setGarageInteriorParking(e.target.value);
+              updateFormData({ garageInteriorParking: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3+">3+</option>
+          </select>
       </div>
+    </div>
+
 
       <div className="mt-6 flex w-full flex-col justify-start font-poppins">
         <div className="flex w-full flex-col justify-start">
           <div className="text-sm font-semibold leading-none text-black">Exterior parking(s)</div>
-          <div className="mt-2 flex w-full items-center justify-between gap-10 border border-gray-200 px-3.5 py-3">
-            <input
-              type="text"
-              value={exteriorParking}
-              onChange={(e) => {
-                setExteriorParking(e.target.value);
-                updateFormData({ exteriorParking: e.target.value });
-              }}
-              placeholder="-"
-              className="flex-1 text-base leading-relaxed text-gray-400 outline-none placeholder:text-gray-400"
-            />
-            <img
-              loading="lazy"
-              src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9b250a935530a8ddc335f9709ae5964bf5e0e4e4?placeholderIfAbsent=true"
-              alt=""
-              className="h-5 w-5 object-contain"
-            />
-          </div>
+          <select
+            value={exteriorParking}
+            onChange={(e) => {
+              setExteriorParking(e.target.value);
+              updateFormData({ exteriorParking: e.target.value });
+            }}
+            className="flex-1 text-base leading-relaxed text-gray-400 outline-none bg-white border border-gray-300 mt-[10px] px-3 py-3"
+          >
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3+">3+</option>
+          </select>
+          
         </div>
       </div>
 
