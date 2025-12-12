@@ -15,15 +15,17 @@ const PropertiesSection = () => {
 
   return (
     <section className="relative bg-white">
-      <div className="mx-auto max-w-[1240px] py-20 px-5 md:px-10 lg:px-5 lg:py-30">
+      <div className="mx-auto max-w-[1280px] py-[60px] md:py-20 px-5 md:px-10 lg:px-5 lg:py-30">
         <div className="flex w-full flex-col items-center gap-5 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-3.5">
-            <svg className="self-stretch" width="" height="30" viewBox="0 0 968 30" fill="none">
-              <path d="M0.996712 22.0255H0V6.82691L9.96622 0L24.218 9.91644V22.0255H9.96622V20.6302H22.9224V10.3151L9.96622 1.49495L0.996712 7.67403V22.0255Z" fill="#B6B8B5"/>
-              <path d="M10.0161 14.3018H3.83691V23.7199L10.0161 29.9986V14.3018Z" fill="#85053B"/>
-              <text fill="#85053B" x="44.2178" y="21.299" fontFamily="Poppins" fontSize="18" fontWeight="800" letterSpacing="0.175em">CHECKOUT OUR NEW</text>
-            </svg>
-            <h2 className="text-center font-poppins text-[38px] font-bold leading-[44px] md:text-left">Latest listed properties</h2>
+            <h2 className='justify-center md:justify-start flex gap-5 font-poppins font-extrabold text-[18px] leading-[27px] tracking-[0.175em] uppercase text-[#85053B]'>
+                <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.996712 22.0255H0V6.82691L9.96622 0L24.218 9.91644V22.0255H9.96622V20.6302H22.9224V10.3151L9.96622 1.49495L0.996712 7.67403V22.0255Z" fill="#B6B8B5"/>
+                <path d="M10.0161 14.3016H3.83691V23.7197L10.0161 29.9985V14.3016Z" fill="#85053B"/>
+                </svg>
+                CHECKOUT OUR NEW
+              </h2>
+            <h2 className="text-center font-poppins text-[38px] font-bold leading-[44px] md:text-left mb-7 md:mb-0">Latest listed properties</h2>
           </div>
 
           <div className="flex gap-1.5 rounded-[44px] bg-gray-200 p-1.5">

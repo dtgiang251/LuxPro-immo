@@ -4,60 +4,62 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-white">
-      <div className="mx-auto max-w-[1240px] px-5">
-        <div className="flex flex-col gap-15 py-15 md:px-5 md:py-20 lg:flex-row lg:py-25">
-          <div className="flex flex-1 flex-col gap-8">
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/abc7878d4ff4e50737ff949344578816822341ed?width=240" 
-              alt="LUX-PRO-IMMO" 
-              className="h-20 w-30"
-            />
-            <div className="flex flex-col gap-5">
-              <p className="text-base leading-[26px]">4, Op de Leemen, L-5846 Fentange, Luxembourg</p>
-              <div className="flex items-center gap-3.5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M2 3C2 2.44772 2.44772 2 3 2H5.15287C5.64171 2 6.0589 2.35341 6.13927 2.8356L6.87858 7.27147C6.95075 7.70451 6.73206 8.13397 6.3394 8.3303L4.79126 9.10437C5.90756 11.8783 8.12168 14.0924 10.8956 15.2087L11.6697 13.6606C11.866 13.2679 12.2955 13.0492 12.7285 13.1214L17.1644 13.8607C17.6466 13.9411 18 14.3583 18 14.8471V17C18 17.5523 17.5523 18 17 18H15C7.8203 18 2 12.1797 2 5V3Z" fill="#85053B"/>
-                </svg>
-                <span className="text-base leading-[26px]">+352 24 83 69 63</span>
+      <div className="mx-auto max-w-[1280px] px-5">
+        <div className="lg:flex flex-col gap-15 py-15 md:px-5 md:py-20 lg:flex-row lg:py-25">
+          <div className='flex flex-col md:flex-row gap-15'>
+            <div className="text-center md:text-left flex flex-1 flex-col gap-8">
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/TEMP/abc7878d4ff4e50737ff949344578816822341ed?width=240" 
+                alt="LUX-PRO-IMMO" 
+                className="h-20 w-30 m-auto md:m-0"
+              />
+              <div className="flex flex-col gap-5">
+                <p className="text-base leading-[26px]">4, Op de Leemen, L-5846 Fentange, Luxembourg</p>
+                <div className="justify-center md:justify-start flex items-center gap-3.5">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 3C2 2.44772 2.44772 2 3 2H5.15287C5.64171 2 6.0589 2.35341 6.13927 2.8356L6.87858 7.27147C6.95075 7.70451 6.73206 8.13397 6.3394 8.3303L4.79126 9.10437C5.90756 11.8783 8.12168 14.0924 10.8956 15.2087L11.6697 13.6606C11.866 13.2679 12.2955 13.0492 12.7285 13.1214L17.1644 13.8607C17.6466 13.9411 18 14.3583 18 14.8471V17C18 17.5523 17.5523 18 17 18H15C7.8203 18 2 12.1797 2 5V3Z" fill="#85053B"/>
+                  </svg>
+                  <span className="text-base leading-[26px]">+352 24 83 69 63</span>
+                </div>
+                <div className="justify-center md:justify-start flex items-center gap-3.5">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 3C2 2.44772 2.44772 2 3 2H5.15287C5.64171 2 6.0589 2.35341 6.13927 2.8356L6.87858 7.27147C6.95075 7.70451 6.73206 8.13397 6.3394 8.3303L4.79126 9.10437C5.90756 11.8783 8.12168 14.0924 10.8956 15.2087L11.6697 13.6606C11.866 13.2679 12.2955 13.0492 12.7285 13.1214L17.1644 13.8607C17.6466 13.9411 18 14.3583 18 14.8471V17C18 17.5523 17.5523 18 17 18H15C7.8203 18 2 12.1797 2 5V3Z" fill="#85053B"/>
+                  </svg>
+                  <span className="text-base leading-[26px]">+352 661 265 022</span>
+                </div>
               </div>
-              <div className="flex items-center gap-3.5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M2 3C2 2.44772 2.44772 2 3 2H5.15287C5.64171 2 6.0589 2.35341 6.13927 2.8356L6.87858 7.27147C6.95075 7.70451 6.73206 8.13397 6.3394 8.3303L4.79126 9.10437C5.90756 11.8783 8.12168 14.0924 10.8956 15.2087L11.6697 13.6606C11.866 13.2679 12.2955 13.0492 12.7285 13.1214L17.1644 13.8607C17.6466 13.9411 18 14.3583 18 14.8471V17C18 17.5523 17.5523 18 17 18H15C7.8203 18 2 12.1797 2 5V3Z" fill="#85053B"/>
-                </svg>
-                <span className="text-base leading-[26px]">+352 661 265 022</span>
-              </div>
+            </div>
+
+            <div className="flex flex-1 gap-6">
+              <div className="flex flex-1 flex-col gap-9">
+                <h3 className="text-center md:text-left font-poppins text-lg font-bold leading-6">Company</h3>
+                <div className='text-center md:text-left justify-center md:justify-start grid md:grid-cols-2 gap-y-10 gap-x-7'>
+                  <ul className="[&>li:not(:last-child)]:mb-7">
+                    <li><Link to="/buy" className="text-base leading-[26px] hover:text-primary transition-colors">Buy</Link></li>
+                    <li><Link to="/buy" className="text-base leading-[26px] hover:text-primary transition-colors">Rent</Link></li>
+                    <li><Link to="/sell" className="text-base leading-[26px] hover:text-primary transition-colors">Sell or Rent property</Link></li>
+                    <li><Link to="/blog" className="text-base leading-[26px] hover:text-primary transition-colors">Blog</Link></li> 
+                  </ul>
+                  <ul className="[&>li:not(:last-child)]:mb-7"> 
+                    <li><Link to="/contact" className="text-base leading-[26px] hover:text-primary transition-colors">Contact</Link></li>
+                    <li><Link to="/finance" className="text-base leading-[26px] hover:text-primary transition-colors">Finance</Link></li>
+                    <li><Link to="/estimate" className="text-base leading-[26px] hover:text-primary transition-colors">Estimate</Link></li>
+                  </ul>
+                </div>
+              </div> 
             </div>
           </div>
 
-          <div className="flex flex-1 gap-6">
-            <div className="flex flex-1 flex-col gap-9">
-              <h3 className="font-poppins text-lg font-bold leading-6">Explore</h3>
-              <div className='grid grid-cols-2 gap-y-10 gap-x-7'>
-                <ul className="[&>li:not(:last-child)]:mb-7">
-                  <li><Link to="/buy" className="text-base leading-[26px] hover:text-primary transition-colors">Buy</Link></li>
-                  <li><Link to="/buy" className="text-base leading-[26px] hover:text-primary transition-colors">Rent</Link></li>
-                  <li><Link to="/sell" className="text-base leading-[26px] hover:text-primary transition-colors">Sell or Rent property</Link></li>
-                  <li><Link to="/blog" className="text-base leading-[26px] hover:text-primary transition-colors">Blog</Link></li> 
-                </ul>
-                <ul className="[&>li:not(:last-child)]:mb-7"> 
-                  <li><Link to="/contact" className="text-base leading-[26px] hover:text-primary transition-colors">Contact</Link></li>
-                  <li><Link to="/finance" className="text-base leading-[26px] hover:text-primary transition-colors">Finance</Link></li>
-                  <li><Link to="/estimate" className="text-base leading-[26px] hover:text-primary transition-colors">Estimate</Link></li>
-                </ul>
-              </div>
-            </div> 
-          </div>
-
-          <div className="flex max-w-full flex-1 flex-col gap-9 lg:max-w-[600px]">
-            <h3 className="font-poppins text-lg font-bold leading-6">Subscribe</h3>
-            <p className="text-base leading-[26px]">Subscribe to get latest property news from us</p>
+          <div className="flex max-w-full flex-1 flex-col gap-5 lg:max-w-[600px]">
+            <h3 className="mt-15 md:mt-0 text-center md:text-left font-poppins text-lg font-bold leading-6">Subscribe</h3>
+            <p className="text-center md:text-left text-base leading-[26px] mt-4">Subscribe to get latest property news from us</p>
             <form className="flex h-14 overflow-hidden rounded-[10px] border border-gray-100">
               <input 
                 type="email" 
                 placeholder="Your Email" 
                 className="flex-1 border border-gray-200 bg-gray-100 px-5 py-5 text-sm text-text-gray outline-none"
               />
-              <button type="submit" className="border border-gray-200 bg-primary px-7 py-5 text-sm text-white">
+              <button type="submit" className="border border-gray-200 bg-primary px-7 text-sm text-white">
                 Subscribe
               </button>
             </form>
@@ -65,7 +67,7 @@ const Footer = () => {
               <input type="checkbox" defaultChecked className="h-4 w-4 rounded border border-text-gray" />
               <span>Personal information is transmitted and used for the purposes described in the privacy statement.</span>
             </label>
-            <div className="flex items-center gap-8">
+            <div className="justify-center md:justify-start flex items-center gap-8 mt-3">
               <span className="text-base leading-[26px]">Follow us on</span>
               <div className="flex gap-5">
                 <a href="#" aria-label="LinkedIn">
@@ -90,13 +92,13 @@ const Footer = () => {
 
         <div className="flex flex-col gap-5 pb-5 md:px-5">
           <div className="h-px w-full bg-gray-300"></div>
-          <div className="flex flex-col items-center justify-between gap-5 text-sm leading-4 md:flex-row">
-            <p className="text-center md:text-left">
+          <div className="lg:flex flex-col items-center justify-between gap-5 text-sm leading-4 md:flex-row">
+            <p className="text-center mb-5 lg:mb-0 lg:text-left">
               Copyright © LUX-PRO-IMMO, 2025 | All rights reserved | 
               <a href="#privacy" className="underline">Privacy Policy</a> | 
               <a href="#cookie" className="underline">Cookie Policy</a>
             </p>
-            <div className="flex flex-col items-center gap-2.5 md:flex-row">
+            <div className="justify-center flex flex-col items-center gap-2.5 md:flex-row">
               <span className='flex items-center'>Designed by <img className='ml-2' alt="" src="./src/public/Meta.svg"/> </span>
               <span className="text-center">
                 & Premium Partner of 
