@@ -2,7 +2,7 @@ import React from 'react';
 
 const PropertyDescription = ({ description }) => {
   return (
-    <div className="w-full rounded-lg">
+    <div className="w-full rounded-lg pt-5 md:pt-12">
       <h2 className="font-poppins text-lg font-bold leading-[1.33] text-black">
         Description
       </h2>

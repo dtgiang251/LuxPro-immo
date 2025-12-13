@@ -36,7 +36,7 @@ const SellServices = () => {
 
   return (
     <div className="flex flex-col items-center gap-15 self-stretch bg-gray-50 py-12 md:py-20 lg:py-30">
-      <div className="max-w-[1240px] px-6 m-auto  flex flex-col items-start gap-5 self-stretch">
+      <div className="max-w-[1280px] px-6 m-auto  flex flex-col items-start gap-5 self-stretch">
         <div className="flex flex-col items-center gap-3.5 self-stretch">
           <div className="flex justify-center items-center gap-5 self-stretch">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
