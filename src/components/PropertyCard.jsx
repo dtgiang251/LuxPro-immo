@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PropertyCard = ({ id, image, title, price, bedrooms, bathrooms, area, floor }) => {
   return (
     <Link to={`/property/${id || '1'}`} className="relative flex flex-col rounded-lg overflow-hidden bg-white shadow-card hover:shadow-xl transition-shadow group">
-      <div className="relative h-[300px] overflow-hidden">
+      <div className="relative h-[400px] overflow-hidden">
         <img 
           src={image} 
           alt={title}
@@ -12,8 +12,8 @@ const PropertyCard = ({ id, image, title, price, bedrooms, bathrooms, area, floo
         />
       </div>
       
-      <div className="flex flex-col gap-3 p-4 rounded-lg absolute bottom-2 left-2 right-2 bg-white">
-        <div className='flex gap-4 items-center'> 
+      <div className="flex flex-col gap-1 p-4 rounded-lg absolute bottom-2 left-2 right-2 bg-white">
+        <div className='flex gap-4 items-center border-b border-[#E5E7EB] pb-4 mb-4'> 
           <div className='w-[50%]'>
             <h3 className="text-black font-poppins text-base font-normal leading-6 min-h-[48px]">
               {title}

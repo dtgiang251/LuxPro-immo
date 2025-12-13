@@ -7,3 +7,44 @@
     @apply font-opensans text-black;
   }
 }
+/********/
+.progress {
+  @apply rounded-lg h-[7px] max-w-[400px] outline-none transition-[background] duration-[450ms] ease-in;
+  background: linear-gradient(to right, #85053B 0%, #85053B 40%, #fff 40%, #fff 100%);
+  -webkit-appearance: none;
+}
+
+.progress::-webkit-slider-thumb {
+  @apply w-5 h-5 rounded-full cursor-ew-resize bg-white;
+  border: 2px solid #85053B;
+  /* Xóa box-shadow nếu không muốn có viền ngoài */
+  /* box-shadow: 0 0 0 2px #85053B; */
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+
+.progress::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #85053B;
+  /* box-shadow: 0 0 0 2px #85053B; */
+  cursor: ew-resize;
+}
+
+.progress::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #85053B;
+  /* box-shadow: 0 0 0 2px #85053B; */
+  cursor: ew-resize;
+}
+
+.progress::-webkit-slider-runnable-track {
+  @apply rounded-lg h-[7px];
+  background: transparent;
+}
+

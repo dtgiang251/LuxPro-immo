@@ -63,7 +63,7 @@ const PropertyCalculator = ({ propertyPrice }) => {
                 step="0.1"
                 value={interestRate}
                 onChange={(e) => setInterestRate(parseFloat(e.target.value))}
-                className="mt-3.5 w-full"
+                className="progress mt-3.5 w-full"
                 style={{
                   background: `linear-gradient(to right, #85053b ${interestRate * 10}%, #e5e7eb ${interestRate * 10}%)`
                 }}
@@ -84,7 +84,7 @@ const PropertyCalculator = ({ propertyPrice }) => {
                 step="1"
                 value={loanTerm}
                 onChange={(e) => setLoanTerm(parseInt(e.target.value))}
-                className="mt-3.5 w-full"
+                className="progress mt-3.5 w-full"
                 style={{
                   background: `linear-gradient(to right, #85053b ${((loanTerm - 5) / 35) * 100}%, #e5e7eb ${((loanTerm - 5) / 35) * 100}%)`
                 }}
@@ -97,7 +97,7 @@ const PropertyCalculator = ({ propertyPrice }) => {
           </div>
         </div>
 
-        <div className="flex min-w-[240px] max-w-[300px] flex-1 flex-col rounded-lg bg-white">
+        <div className="text-center flex min-w-[240px] max-w-[300px] flex-1 flex-col rounded-lg bg-white">
           <div className="flex flex-col">
             <h3 className="font-poppins text-lg font-bold leading-[1.33] text-black">
               Totals
@@ -145,7 +145,7 @@ const PropertyCalculator = ({ propertyPrice }) => {
             </div>
           </div>
 
-          <div className="mt-6 flex items-center gap-2.5 rounded-lg border border-gray-200 bg-gray-50 px-5 py-3.5">
+          <div className="text-left mt-6 flex items-center gap-2.5 rounded-lg border border-gray-200 bg-gray-50 px-5 py-3.5">
             <div className="flex-1 font-poppins text-sm font-normal leading-[22px] text-[#374151]">
               Estimated monthly income to acquire this property:
             </div>

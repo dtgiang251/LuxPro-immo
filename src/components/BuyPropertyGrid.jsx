@@ -96,7 +96,7 @@ const BuyPropertyGrid = () => {
   ];
 
   return (
-    <div className="mx-auto max-w-[1240px] flex flex-col gap-10 px-6 py-12 md:py-20">
+    <div className="mx-auto max-w-[1280px] flex flex-col gap-5 px-6 py-12 md:pt-15 md:py-20">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5">
         <div className="flex items-center gap-5">
           <div className="flex items-center gap-1">
@@ -124,9 +124,9 @@ const BuyPropertyGrid = () => {
               <option>Price: High to Low</option>
             </select>
             <span className="absolute right-2 pointer-events-none">
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.75 0.75L6.75 6.75L12.75 0.75" stroke="#939393" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.787109 0.787598L4.98711 4.9876L9.18711 0.787598" stroke="#939393" stroke-width="1.575" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
             </span>
           </div>
 

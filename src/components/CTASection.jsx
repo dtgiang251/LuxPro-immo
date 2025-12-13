@@ -3,7 +3,7 @@ import React from 'react';
 const CTASection = () => {
   return (
     <section className="relative md:h-[495px] overflow-hidden bg-[#F9FAFB]">
-      <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-5 relative pb-30 md:pb-0">
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-5 relative pb-0">
         <img className='absolute z-10 top-0 left-[45%]' alt="" src="./src/public/before-img01.svg"/> 
         <div className="relative md:flex pt-[60px] md:pt-24 pb-0 md:py-24" style={{background:"url('./src/public/bg01.svg') no-repeat center/cover"}}>
         <div className="flex w-full md:max-w-[513px] flex-col gap-13 relative z-10">          
@@ -30,7 +30,7 @@ const CTASection = () => {
             </button>
           </div>
         </div>
-        <div className="md:absolute right-0 bottom-0 md:top-0 block md:h-[495px] md:w-[757px]">
+        <div className="md:absolute right-0 bottom-0 md:top-0 block h-[180px] md:h-[495px] md:w-[757px]">
           <img 
             src="https://api.builder.io/api/v1/image/assets/TEMP/e6b13266676a14730d654d7141f6c23f77ec40c5?width=1514" 
             alt="House" 

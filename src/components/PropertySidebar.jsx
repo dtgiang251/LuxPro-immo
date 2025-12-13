@@ -2,7 +2,7 @@ import React from 'react';
 
 const PropertySidebar = ({ title, address, bedrooms, bathrooms, area, floor }) => {
   return (
-    <div className="sticky top-6 w-full min-w-[240px] max-w-[360px] rounded-lg border border-[#e5e5e5] bg-white p-6 shadow-[0_16px_40px_-6px_rgba(30,52,96,0.08)]">
+    <div className="md:sticky mt-10 top-6 w-full min-w-[240px] md:max-w-[360px] rounded-lg border border-[#e5e5e5] bg-white p-6 shadow-[0_16px_40px_-6px_rgba(30,52,96,0.08)]">
       <div className="flex flex-col">
         <h3 className="font-poppins text-2xl font-bold leading-[30px] text-black">
           {title}
@@ -57,7 +57,7 @@ const PropertySidebar = ({ title, address, bedrooms, bathrooms, area, floor }) =
 
       <div className="mt-6 h-px w-full bg-gray-200"></div>
 
-      <div className="mt-6 flex items-center gap-4">
+      <div className="mt-6 md:flex text-center md:text-left items-center gap-4">
         <div className="flex-1">
           <h4 className="font-poppins text-lg font-bold leading-[1.33] text-black">
             Visit this property
@@ -66,7 +66,7 @@ const PropertySidebar = ({ title, address, bedrooms, bathrooms, area, floor }) =
             Contact our agency to request extra information, some advice or a visit
           </p>
         </div>
-        <div className="flex items-center gap-3.5">
+        <div className="justify-center md:justify-start mt-4 md:mt-0 flex items-center gap-3.5">
           <button className="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-10">
             <img
               src="https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/c5f5bf34301f4cc6ab79b81971051abea62f52dd?placeholderIfAbsent=true"

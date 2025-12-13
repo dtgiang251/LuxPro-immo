@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 
 const PropertyListings = ({ properties }) => {
   return (
-    <div className="w-full bg-gray-50 px-5 py-[100px] lg:px-[100px]">
-      <div className="flex items-center justify-between gap-10 flex-wrap">
+    <div className="w-full bg-gray-50 py-[60px] md:py-[100px]">
+      <div className="flex items-center justify-between gap-10 flex-wrap max-w-[1280px] m-auto px-6">
         <h2 className="font-poppins text-[28px] md:text-[38px] font-bold leading-[1.16] text-dark">
           More listings
         </h2>
         <Link
           to="/buy"
-          className="rounded-[10px] border-[2.209px] border-primary px-[34px] py-3 text-center font-poppins text-base font-normal leading-[1.63] text-primary hover:bg-primary hover:text-white transition-colors"
+          className="hidden md:inline-block rounded-[10px] border-[2.209px] border-primary px-[34px] py-3 text-center font-poppins text-base font-normal leading-[1.63] text-primary hover:bg-primary hover:text-white transition-colors"
         >
           View more
         </Link>
       </div>
 
-      <div className="mt-8 flex gap-4 flex-wrap">
+      <div className="mt-8 flex gap-4 flex-wrap max-w-[1280px] m-auto px-6">
         {properties.map((property, index) => (
           <div
             key={index}
@@ -83,6 +83,14 @@ const PropertyListings = ({ properties }) => {
           </div>
         ))}
       </div>
+      <div className='max-w-[1280px] px-6'>
+          <Link
+            to="/buy"
+            className="mt-8 md:mt-0 block md:hidden rounded-[10px] border-[2.209px] border-primary px-[34px] py-3 text-center font-poppins text-base font-normal leading-[1.63] text-primary hover:bg-primary hover:text-white transition-colors"
+          >
+            View more
+          </Link>
+      </div>  
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const PropertyTitleBar = ({ title, address, price, bedrooms, bathrooms, area, floor }) => {
   return (
-    <div className="flex items-center justify-between gap-10 bg-white px-5 py-6 lg:px-[120px] flex-wrap">
+    <div className="flex items-center justify-between gap-5 md:gap-10 bg-white px-6 py-6 max-w-[1280px] m-auto flex-wrap">
       <div className="flex flex-1 flex-col gap-1.5">
         <h1 className="font-poppins text-[28px] md:text-[38px] font-bold leading-[1.16] text-dark">
           {title}
@@ -13,7 +13,7 @@ const PropertyTitleBar = ({ title, address, price, bedrooms, bathrooms, area, fl
       </div>
 
       <div className="flex flex-col gap-1.5 w-auto">
-        <div className="font-poppins text-[28px] md:text-[38px] font-medium leading-[1.16] text-dark text-right">
+        <div className="font-poppins text-[28px] md:text-[38px] font-medium leading-[1.16] text-dark md:text-right">
           {price}
         </div>
         <div className="flex items-center gap-[18px] justify-end font-opensans text-sm font-normal leading-6 text-black">
