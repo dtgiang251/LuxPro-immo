@@ -146,14 +146,14 @@ Conveniently located near shops, schools, and services, with quick access to Lux
                 </div>
                 <div className='static sm:absolute right-0 bottom-[-44px] bg-white p-3 rounded-[10px] w-full sm:w-[257px]'>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15117.612803332247!2d105.67266866351704!3d18.69075829511922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zTmjDoCBow6BuZw!5e0!3m2!1svi!2s!4v1765600374798!5m2!1svi!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2587.88814550111!2d6.145712276912192!3d49.562133650924764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47954864dafeaba7%3A0xbd8702de0dcb7bd1!2s4%20Op%20de%20Leemen%2C%205846%20Fentange%20Hesperange%2C%20Luxembourg!5e0!3m2!1svi!2s!4v1765783714367!5m2!1svi!2s"
                     width="100%"
                     height="169"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                  ></iframe> 
                 </div>
            </div>
       </div>
