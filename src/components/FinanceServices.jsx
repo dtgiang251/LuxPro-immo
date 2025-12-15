@@ -30,8 +30,8 @@ const FinanceServices = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-15 self-stretch bg-gray-50 px-6 py-12 md:px-12 md:py-20 lg:px-25 lg:py-30">
-      <div className="flex flex-col items-start gap-5 self-stretch">
+    <div className="flex flex-col items-center gap-15 self-stretch bg-gray-50 py-12 md:py-20 lg:py-30">
+      <div className="px-6 max-w-[1280px] m-auto flex flex-col items-start gap-5 self-stretch">
         <div className="flex flex-col items-center gap-3.5 self-stretch">
           <div className="flex justify-center items-center gap-5 self-stretch">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const FinanceServices = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-2.5 self-stretch">
+      <div className="px-6 max-w-[1280px] w-full m-auto flex flex-col items-start gap-2.5 self-stretch">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2.5 self-stretch">
           {services.map((service, index) => (
             <div key={index} className="flex flex-col items-start gap-3.5 rounded-lg bg-white shadow-card p-4 md:p-5">
