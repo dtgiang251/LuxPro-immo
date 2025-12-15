@@ -5,7 +5,7 @@ import FinanceCalculator from './FinanceCalculator';
 import FinanceMortgage from './FinanceMortgage';
 import FinanceServices from './FinanceServices';
 import FinanceTestimonials from './FinanceTestimonials';
-import FinanceCTA from './FinanceCTA';
+import CTASection from './CTASection';
 import Footer from './Footer';
 
 const FinancePage = () => {
@@ -17,7 +17,7 @@ const FinancePage = () => {
       <FinanceMortgage />
       <FinanceServices />
       <FinanceTestimonials />
-      <FinanceCTA />
+      <CTASection />
       <Footer />
     </div>
   );

@@ -37,8 +37,8 @@ const FinanceCalculator = () => {
   };
 
   return (
-    <div className="flex flex-col items-start gap-5 self-stretch bg-gray-50 px-6 py-12 md:px-12 md:py-20 lg:px-25">
-      <div className="flex flex-col lg:flex-row items-start gap-5 self-stretch">
+    <div className="flex flex-col items-start gap-5 self-stretch bg-gray-50 py-14 md:py-20 lg:px-25">
+      <div className="px-6 max-w-[1280px] m-auto flex flex-col lg:flex-row items-start gap-5 self-stretch">
         <div className="flex flex-col items-start gap-4 flex-1 rounded-lg bg-white p-6">
           <h2 className="self-stretch text-center text-gray-900 font-poppins text-[38px] font-bold leading-[44px]">
             Calculator simulator
@@ -186,7 +186,7 @@ const FinanceCalculator = () => {
         </div>
       </div>
 
-      <p className="self-stretch text-gray-600 font-poppins text-xs leading-4">
+      <p className="px-6 max-w-[1280px] m-auto self-stretch text-gray-600 font-poppins text-xs leading-4">
         Please be aware that our simulation is an estimate and not a formal finance offer. It offers a snapshot 
         of your potential monthly repayments, aiding you in making informed decisions about your financial project.
       </p>

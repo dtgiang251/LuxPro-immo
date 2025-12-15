@@ -17,8 +17,8 @@ const FinanceTestimonials = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-20 self-stretch px-6 py-12 md:px-12 md:py-20 lg:px-25">
-      <div className="flex flex-col items-start gap-5 self-stretch">
+    <div className="flex flex-col items-center gap-20 self-stretch px-6 py-12 md:px-12 md:py-24 lg:px-25">
+      <div className="px-6 max-w-[1280px] m-auto flex flex-col items-start gap-5 self-stretch">
         <div className="flex flex-col items-center gap-3.5 self-stretch">
           <div className="flex justify-center items-center gap-5 self-stretch">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ const FinanceTestimonials = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-start gap-2.5 self-stretch">
+      <div className="max-w-[1280px] m-auto grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-2.5 self-stretch">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="flex flex-col items-start gap-5 rounded-lg bg-white shadow-card p-6">
             <div className="flex justify-between items-center flex-wrap gap-6 self-stretch">
