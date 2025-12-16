@@ -85,8 +85,8 @@ const EstimatePage = () => {
     <div className="estimate-page">
       <Navigation />
       
-      <div className="flex w-full flex-wrap font-poppins">
-        <div className="flex flex-1 flex-col justify-center border-b border-gray-200 bg-white px-6 pt-[3px] pb-[30px] md:px-16 lg:pl-[145px]">
+      <div className="flex w-full flex-wrap font-poppins max-w-[1280px] m-auto px-6 gap-25">
+        <div className="md:w-[60%] flex flex-1 flex-col justify-center border-b border-gray-200 bg-white pt-[3px] pb-[30px]">
           <div className="flex w-full max-w-[640px] flex-wrap items-start gap-7">
             <EstimateStepper steps={steps} currentStep={currentStep} />
             
@@ -143,43 +143,44 @@ const EstimatePage = () => {
             </div>
           </div>
         </div>
-
-        <img
-          loading="lazy"
-          srcSet={
-            currentStep === 6
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1200 1200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1600 1600w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=2000 2000w"
-              : currentStep === 5
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1200 1200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1600 1600w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=2000 2000w"
-              : currentStep === 4
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=1200 1200w"
-              : currentStep === 3
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=1200 1200w"
-              : currentStep === 2
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=1200 1200w"
-              : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=1200 1200w"
-          }
-          src={
-            currentStep === 6
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true"
-              : currentStep === 5
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true"
-              : currentStep === 4
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true"
-              : currentStep === 3
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true"
-              : currentStep === 2
-              ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true"
-              : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true"
-          }
-          alt="Property visualization"
-          className="min-w-[240px] flex-1 object-cover"
-          style={{
-            flexBasis: '200px',
-            maxWidth: '640px',
-            aspectRatio: currentStep === 6 ? '0.86' : currentStep === 5 ? '0.86' : currentStep === 4 ? '0.86' : currentStep === 3 ? '0.65' : currentStep === 2 ? '0.61' : '0.82'
-          }}
-        />
+        <div className='md:w-[40%]'>      
+          <img
+            loading="lazy"
+            srcSet={
+              currentStep === 6
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1200 1200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1600 1600w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=2000 2000w"
+                : currentStep === 5
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1200 1200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=1600 1600w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true&width=2000 2000w"
+                : currentStep === 4
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true&width=1200 1200w"
+                : currentStep === 3
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true&width=1200 1200w"
+                : currentStep === 2
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true&width=1200 1200w"
+                : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=100 100w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=200 200w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=400 400w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=800 800w, https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true&width=1200 1200w"
+            }
+            src={
+              currentStep === 6
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true"
+                : currentStep === 5
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/64917bdc9d2ee9a2ebc3a11f6ef2d54c3b808525?placeholderIfAbsent=true"
+                : currentStep === 4
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/d751985f4b1b708ddfb9c5c1130539c73c162b65?placeholderIfAbsent=true"
+                : currentStep === 3
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/7a0b2e981c126e5f71656df2bcde2f859ff851ad?placeholderIfAbsent=true"
+                : currentStep === 2
+                ? "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/9fda7dfcab0dfc29c30f473d129432353a309683?placeholderIfAbsent=true"
+                : "https://api.builder.io/api/v1/image/assets/89a509c6608f4310bc23f3bed697f65c/74e02fff4d85c572f3d609494b5884936df5dee7?placeholderIfAbsent=true"
+            }
+            alt="Property visualization"
+            className="w-full flex-1 object-cover"
+            style={{
+              flexBasis: '200px',
+              maxWidth: '640px',
+              aspectRatio: currentStep === 6 ? '0.86' : currentStep === 5 ? '0.86' : currentStep === 4 ? '0.86' : currentStep === 3 ? '0.65' : currentStep === 2 ? '0.61' : '0.82'
+            }}
+          />
+        </div>
       </div>
     </div>
   );
